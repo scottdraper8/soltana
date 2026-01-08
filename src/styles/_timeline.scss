@@ -1,0 +1,199 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.table-wrap {
+  margin-top: 14px;
+  padding: 14px;
+}
+
+.table-head {
+  padding: 2px 4px 10px;
+
+  p {
+    margin: 6px 0 0;
+  }
+}
+
+.scroll {
+  overflow: auto;
+  border-radius: $radius-lg;
+  border: 1px solid rgb(255 255 255 / 7%);
+  background: linear-gradient(180deg, rgb(255 255 255 / 3%), rgb(0 0 0 / 10%));
+
+  @include neo-inset;
+}
+
+table.timeline {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 800px;
+
+  thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $ink-2;
+    padding: 14px 12px;
+    border-bottom: 1px solid rgb(255 255 255 / 9%);
+    backdrop-filter: blur(8px);
+
+    @include gradient-table-header;
+  }
+
+  tbody {
+    td {
+      padding: 12px;
+      border-bottom: 1px solid rgb(255 255 255 / 7%);
+      vertical-align: top;
+      color: $ink-1;
+    }
+
+    tr {
+      background: linear-gradient(180deg, rgb(255 255 255 / 2%), rgb(0 0 0 / 10%));
+
+      &:nth-child(2n) {
+        background: linear-gradient(180deg, rgb(255 255 255 / 3%), rgb(0 0 0 / 12%));
+      }
+
+      &:hover {
+        @include gradient-table-hover;
+      }
+
+      &.current-week {
+        box-shadow:
+          inset 4px 0 0 $green,
+          0 0 20px rgba($green, 0.15);
+
+        @include gradient-current-week;
+
+        .weeknum {
+          color: $green;
+        }
+
+        .dates {
+          color: $ink-1;
+        }
+      }
+    }
+  }
+}
+
+// Column widths
+.col-week {
+  width: 130px;
+}
+
+.col-cfm {
+  width: 320px;
+
+  a {
+    font-weight: 600;
+    color: $cyan;
+    display: block;
+    margin-bottom: 6px;
+    line-height: 1.4;
+
+    &:hover {
+      color: $pink;
+    }
+  }
+}
+
+.col-chrono {
+  width: 450px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.chrono-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  li {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: linear-gradient(145deg, rgb(255 255 255 / 3%), rgb(0 0 0 / 8%));
+    border: 1px solid rgb(255 255 255 / 5%);
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: linear-gradient(145deg, rgb(255 255 255 / 5%), rgb(0 0 0 / 6%));
+    }
+  }
+}
+
+.chrono-day {
+  flex-shrink: 0;
+  font-weight: 600;
+  font-size: 11px;
+  color: $cyan;
+  letter-spacing: 0.02em;
+  min-width: 45px;
+}
+
+.chrono-reading {
+  color: $ink-1;
+  font-size: 12px;
+}
+
+.chrono-placeholder {
+  color: $ink-2;
+  font-size: 12px;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.col-track {
+  width: 150px;
+}
+
+.weeknum {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: $ink-0;
+}
+
+.dates {
+  margin-top: 6px;
+  font-size: 12px;
+  color: $ink-2;
+}
+
+.cfm-reading {
+  font-size: 13px;
+  color: $ink-2;
+  padding-left: 8px;
+  border-left: 2px solid rgba($cyan, 0.3);
+}
+
+// Track checkboxes
+.chk {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid rgb(255 255 255 / 7%);
+  background: linear-gradient(145deg, rgb(255 255 255 / 4%), rgb(0 0 0 / 14%));
+  color: $ink-1;
+  font-size: 12px;
+
+  @include neo-chip;
+
+  input[type='checkbox'] {
+    @include checkbox-neo;
+  }
+}

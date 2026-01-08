@@ -1,0 +1,119 @@
+@use 'variables' as *;
+
+// Neumorphic raised effect (outer shadows)
+@mixin neo-raised($size: 10px) {
+  box-shadow:
+    $size $size ($size * 2.4) $shadow-lo,
+    (-$size) (-$size) ($size * 2.4) $shadow-hi;
+}
+
+// Neumorphic inset effect (inner shadows)
+@mixin neo-inset($size: 10px) {
+  box-shadow:
+    inset $size $size ($size * 2) rgb(0 0 0 / 45%),
+    inset (-$size) (-$size) ($size * 2) rgb(255 255 255 / 5%);
+}
+
+// Neumorphic chip shadows
+@mixin neo-chip {
+  box-shadow:
+    6px 6px 14px rgb(0 0 0 / 35%),
+    -6px -6px 14px rgb(255 255 255 / 4%);
+}
+
+// Glass card background
+@mixin glass-card {
+  border-radius: $radius-lg;
+  border: 1px solid $stroke;
+  background: linear-gradient(145deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 2%));
+  backdrop-filter: blur(8px);
+}
+
+// Accent gradient (cyan-purple-pink)
+@mixin gradient-accent {
+  background: linear-gradient(90deg, rgba($cyan, 0.22), rgba($purple, 0.22), rgba($pink, 0.2));
+  border: 1px solid rgb(255 255 255 / 8%);
+}
+
+// Table header gradient
+@mixin gradient-table-header {
+  background:
+    linear-gradient(135deg, rgba($purple, 0.14), rgba($cyan, 0.1)),
+    linear-gradient(180deg, rgba($bg-1, 0.95), rgba($bg-1, 0.8));
+}
+
+// Table row hover gradient
+@mixin gradient-table-hover {
+  background:
+    linear-gradient(135deg, rgba($pink, 0.1), rgba($purple, 0.1), rgba($cyan, 0.08)),
+    linear-gradient(180deg, rgb(255 255 255 / 3%), rgb(0 0 0 / 12%));
+}
+
+// Current week highlight gradient
+@mixin gradient-current-week {
+  background:
+    linear-gradient(135deg, rgba($green, 0.12), rgba($cyan, 0.1)),
+    linear-gradient(180deg, rgb(255 255 255 / 4%), rgb(0 0 0 / 8%));
+}
+
+// Scroll nav button gradient
+@mixin gradient-scroll-nav {
+  background: linear-gradient(145deg, rgba($purple, 0.25), rgba($cyan, 0.15));
+}
+
+// Badge base styles
+@mixin badge-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid rgb(255 255 255 / 10%);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: $ink-0;
+}
+
+// Badge color variants
+@mixin badge-variant($color1, $color2) {
+  background: linear-gradient(135deg, rgba($color1, 0.18), rgba($color2, 0.12));
+}
+
+// Checkbox neumorphic styling
+@mixin checkbox-neo {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid rgb(255 255 255 / 8%);
+  background: linear-gradient(145deg, rgb(255 255 255 / 5%), rgb(0 0 0 / 15%));
+  box-shadow:
+    inset 3px 3px 6px rgb(0 0 0 / 40%),
+    inset -3px -3px 6px rgb(255 255 255 / 5%);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+
+  &:hover {
+    background: linear-gradient(145deg, rgb(255 255 255 / 8%), rgb(0 0 0 / 12%));
+  }
+
+  &:checked {
+    background: linear-gradient(135deg, rgba($purple, 0.35), rgba($cyan, 0.25));
+    border: 1px solid rgba($purple, 0.3);
+    box-shadow:
+      inset 4px 4px 8px rgb(0 0 0 / 50%),
+      inset -2px -2px 6px rgb(255 255 255 / 10%);
+
+    &::after {
+      content: '✓';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $ink-0;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+}

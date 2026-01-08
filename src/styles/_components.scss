@@ -1,0 +1,120 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// Cards
+.card {
+  @include glass-card;
+}
+
+.neo {
+  @include neo-raised;
+}
+
+.neo-inset {
+  @include neo-inset;
+}
+
+// Hero section
+.hero {
+  display: flex;
+  gap: 16px;
+  padding: 18px;
+  align-items: stretch;
+
+  &-left {
+    flex: 1 1 auto;
+  }
+
+  &-right {
+    flex: 0 0 280px;
+    display: flex;
+  }
+}
+
+.subtitle {
+  margin: 10px 0 0;
+  color: $ink-1;
+  max-width: 68ch;
+}
+
+// Legend
+.legend {
+  width: 100%;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+
+  &-title {
+    font-weight: 650;
+    color: $ink-1;
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  &-note {
+    font-size: 12px;
+  }
+}
+
+// Chips
+.chips {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgb(255 255 255 / 8%);
+  background: linear-gradient(145deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 2%));
+  color: $ink-1;
+  font-size: 12px;
+
+  @include neo-chip;
+
+  &.accent {
+    color: $ink-0;
+
+    @include gradient-accent;
+  }
+}
+
+// Badges
+.badge {
+  @include badge-base;
+}
+
+.b-kjv {
+  @include badge-variant($cyan, $teal);
+}
+
+.b-mac {
+  @include badge-variant($orange, $yellow);
+}
+
+.b-heb {
+  @include badge-variant($green, $teal);
+}
+
+.b-esv {
+  @include badge-variant($pink, $magenta);
+}
+
+// Responsive adjustments
+@media (width <= 980px) {
+  .hero {
+    flex-direction: column;
+
+    &-right {
+      flex: 1 1 auto;
+    }
+  }
+}

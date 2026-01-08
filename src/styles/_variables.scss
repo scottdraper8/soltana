@@ -1,0 +1,67 @@
+// Dracula-inspired color palette
+$bg-0: #0b0d17;
+$bg-1: #11132a;
+$bg-2: #171a35;
+$bg-3: #1f2350;
+$ink-0: #f8f8f2;
+$ink-1: #d6d8f3;
+$ink-2: #9aa0c6;
+
+// Accent colors
+$cyan: #8be9fd;
+$green: #50fa7b;
+$orange: #ffb86c;
+$pink: #ff79c6;
+$purple: #bd93f9;
+$red: #f55;
+$yellow: #f1fa8c;
+
+// Extended accents
+$teal: #2de2e6;
+$indigo: #6c63ff;
+$violet: #9d4edd;
+$magenta: #ff3cac;
+
+// Transparency values (using rgba for Sass compatibility)
+$stroke: rgb(255 255 255 / 8%);
+$glass: rgb(255 255 255 / 4%);
+$shadow-hi: rgb(255 255 255 / 6%);
+$shadow-lo: rgb(0 0 0 / 60%);
+
+// Border radii
+$radius-lg: 18px;
+$radius-md: 14px;
+$radius-sm: 10px;
+
+// Spacing
+$pad: 14px;
+
+// CSS custom properties export
+:root {
+  --bg-0: #{$bg-0};
+  --bg-1: #{$bg-1};
+  --bg-2: #{$bg-2};
+  --bg-3: #{$bg-3};
+  --ink-0: #{$ink-0};
+  --ink-1: #{$ink-1};
+  --ink-2: #{$ink-2};
+  --cyan: #{$cyan};
+  --green: #{$green};
+  --orange: #{$orange};
+  --pink: #{$pink};
+  --purple: #{$purple};
+  --red: #{$red};
+  --yellow: #{$yellow};
+  --teal: #{$teal};
+  --indigo: #{$indigo};
+  --violet: #{$violet};
+  --magenta: #{$magenta};
+  --stroke: #{$stroke};
+  --glass: #{$glass};
+  --shadow-hi: #{$shadow-hi};
+  --shadow-lo: #{$shadow-lo};
+  --radius-lg: #{$radius-lg};
+  --radius-md: #{$radius-md};
+  --radius-sm: #{$radius-sm};
+  --pad: #{$pad};
+}

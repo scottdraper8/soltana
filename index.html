@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>2026 OT Timeline (CFM + Chronological + Multi-Resource)</title>
+  </head>
+
+  <body>
+    <header class="app-shell sticky-header" id="main-header">
+      <div class="hero card neo">
+        <div class="hero-left">
+          <h1>2026 Old Testament Study Timeline</h1>
+          <p class="subtitle">
+            Weekly plan aligning Come, Follow Me (OT 2026) with a full chronological OT pass. This
+            timeline lists references for study using your owned editions (KJV-JST, LSB-Mac, Hebrew
+            Study Bible, ESV Church History Bible).
+          </p>
+          <div class="chips">
+            <span class="chip accent">52 weeks</span>
+            <span class="chip accent">Chronological coverage</span>
+            <span class="chip accent">CFM-aligned anchor</span>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="legend card neo-inset">
+            <div class="legend-title">Legend</div>
+            <div class="legend-grid">
+              <span class="badge b-kjv">KJV-JST</span>
+              <span class="badge b-mac">LSB-Mac</span>
+              <span class="badge b-heb">Hebrew</span>
+              <span class="badge b-esv">ESV CH</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <button class="scroll-nav-btn" id="scroll-nav" aria-label="Scroll to current week">
+      <svg
+        class="scroll-arrow"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+      <span class="scroll-label">Current Week</span>
+    </button>
+
+    <main class="app-shell">
+      <section class="card neo table-wrap">
+        <div class="table-head">
+          <h2>Weekly Timeline</h2>
+          <p class="muted">
+            Columns include CFM readings with linked lessons and chronological OT readings that
+            amplify the weekly study.
+          </p>
+        </div>
+
+        <div class="scroll">
+          <table class="timeline" aria-label="Old Testament study timeline table">
+            <thead>
+              <tr>
+                <th>Week</th>
+                <th>Come, Follow Me (OT 2026)</th>
+                <th>Chronological OT (amplification)</th>
+                <th>Track</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Rows rendered by TypeScript -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

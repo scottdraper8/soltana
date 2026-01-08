@@ -1,0 +1,84 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// Sticky header with auto-hide
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition:
+    transform 0.15s ease-out,
+    opacity 0.15s ease-out;
+
+  &.header-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      transform 0.6s ease-in,
+      opacity 0.6s ease-in;
+  }
+}
+
+// Scroll navigation button
+.scroll-nav-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 16px;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: $radius-md;
+  backdrop-filter: blur(12px);
+  box-shadow:
+    8px 8px 20px rgb(0 0 0 / 50%),
+    -4px -4px 12px rgb(255 255 255 / 8%),
+    inset 0 1px 0 rgb(255 255 255 / 10%);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+
+  @include gradient-scroll-nav;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    background: linear-gradient(145deg, rgba($purple, 0.35), rgba($cyan, 0.25));
+    box-shadow:
+      10px 10px 24px rgb(0 0 0 / 60%),
+      -6px -6px 16px rgb(255 255 255 / 10%),
+      inset 0 1px 0 rgb(255 255 255 / 15%);
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+.scroll-arrow {
+  width: 24px;
+  height: 24px;
+  color: $ink-0;
+  transition: transform 0.3s ease;
+}
+
+.scroll-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: $ink-1;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}

@@ -1,0 +1,1026 @@
+[
+  {
+    "week": 1,
+    "startDate": "2025-12-29",
+    "endDate": "2026-01-04",
+    "dateLabel": "Dec 29–Jan 4",
+    "cfm": {
+      "title": "The First Testament of Jesus Christ",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/01?lang=eng",
+      "reading": "Introduction to the Old Testament"
+    },
+    "chronological": ["", "", "", "", "", "", ""]
+  },
+  {
+    "week": 2,
+    "startDate": "2026-01-05",
+    "endDate": "2026-01-11",
+    "dateLabel": "Jan 5–11",
+    "cfm": {
+      "title": "This Is My Work and My Glory",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/02?lang=eng",
+      "reading": "Moses 1; Abraham 3"
+    },
+    "chronological": ["", "", "", "", "", "", ""]
+  },
+  {
+    "week": 3,
+    "startDate": "2026-01-12",
+    "endDate": "2026-01-18",
+    "dateLabel": "Jan 12–18",
+    "cfm": {
+      "title": "In the Beginning God Created the Heaven and the Earth",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/03?lang=eng",
+      "reading": "Genesis 1–2; Moses 2–3; Abraham 4–5"
+    },
+    "chronological": [
+      "Genesis 1-3",
+      "Genesis 4-5",
+      "Genesis 6-8",
+      "Genesis 9-10",
+      "Genesis 11; Job 1-2",
+      "Job 3-5",
+      "Job 6-7"
+    ]
+  },
+  {
+    "week": 4,
+    "startDate": "2026-01-19",
+    "endDate": "2026-01-25",
+    "dateLabel": "Jan 19–25",
+    "cfm": {
+      "title": "The Fall of Adam and Eve",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/04?lang=eng",
+      "reading": "Genesis 3–4; Moses 4–5"
+    },
+    "chronological": [
+      "Job 8-10",
+      "Job 11-12",
+      "Job 13-15",
+      "Job 16-18",
+      "Job 19-20",
+      "Job 21-23",
+      "Job 24-25"
+    ]
+  },
+  {
+    "week": 5,
+    "startDate": "2026-01-26",
+    "endDate": "2026-02-01",
+    "dateLabel": "Jan 26–Feb 1",
+    "cfm": {
+      "title": "Teach These Things Freely unto Your Children",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/05?lang=eng",
+      "reading": "Genesis 5; Moses 6"
+    },
+    "chronological": [
+      "Job 26-28",
+      "Job 29-31",
+      "Job 32-33",
+      "Job 34-36",
+      "Job 37-38",
+      "Job 39-41",
+      "Job 42; Genesis 12"
+    ]
+  },
+  {
+    "week": 6,
+    "startDate": "2026-02-02",
+    "endDate": "2026-02-08",
+    "dateLabel": "Feb 2–8",
+    "cfm": {
+      "title": "The Lord Called His People Zion",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/06?lang=eng",
+      "reading": "Moses 7"
+    },
+    "chronological": [
+      "Genesis 13-15",
+      "Genesis 16-18",
+      "Genesis 19-20",
+      "Genesis 21-23",
+      "Genesis 24-25",
+      "Genesis 26-28",
+      "Genesis 29-31"
+    ]
+  },
+  {
+    "week": 7,
+    "startDate": "2026-02-09",
+    "endDate": "2026-02-15",
+    "dateLabel": "Feb 9–15",
+    "cfm": {
+      "title": "Noah Found Grace in the Eyes of the Lord",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/07?lang=eng",
+      "reading": "Genesis 6–11; Moses 8"
+    },
+    "chronological": [
+      "Genesis 32-33",
+      "Genesis 34-36",
+      "Genesis 37-38",
+      "Genesis 39-41",
+      "Genesis 42-44",
+      "Genesis 45-46",
+      "Genesis 47-49"
+    ]
+  },
+  {
+    "week": 8,
+    "startDate": "2026-02-16",
+    "endDate": "2026-02-22",
+    "dateLabel": "Feb 16–22",
+    "cfm": {
+      "title": "To Be a Greater Follower of Righteousness",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/08?lang=eng",
+      "reading": "Genesis 12–17; Abraham 1–2"
+    },
+    "chronological": [
+      "Genesis 50; Exodus 1",
+      "Exodus 2-4",
+      "Exodus 5-7",
+      "Exodus 8-9",
+      "Exodus 10-12",
+      "Exodus 13-14",
+      "Exodus 15-17"
+    ]
+  },
+  {
+    "week": 9,
+    "startDate": "2026-02-23",
+    "endDate": "2026-03-01",
+    "dateLabel": "Feb 23–Mar 1",
+    "cfm": {
+      "title": "Is Any Thing Too Hard for the Lord?",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/09?lang=eng",
+      "reading": "Genesis 18–23"
+    },
+    "chronological": [
+      "Exodus 18-20",
+      "Exodus 21-22",
+      "Exodus 23-25",
+      "Exodus 26-27",
+      "Exodus 28-30",
+      "Exodus 31-33",
+      "Exodus 34-35"
+    ]
+  },
+  {
+    "week": 10,
+    "startDate": "2026-03-02",
+    "endDate": "2026-03-08",
+    "dateLabel": "Mar 2–8",
+    "cfm": {
+      "title": "Let God Prevail",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/10?lang=eng",
+      "reading": "Genesis 24–33"
+    },
+    "chronological": [
+      "Exodus 36-38",
+      "Exodus 39-40",
+      "Leviticus 1-3",
+      "Leviticus 4-6",
+      "Leviticus 7-8",
+      "Leviticus 9-11",
+      "Leviticus 12-13"
+    ]
+  },
+  {
+    "week": 11,
+    "startDate": "2026-03-09",
+    "endDate": "2026-03-15",
+    "dateLabel": "Mar 9–15",
+    "cfm": {
+      "title": "The Lord Was with Joseph",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/11?lang=eng",
+      "reading": "Genesis 37–41"
+    },
+    "chronological": [
+      "Leviticus 14-16",
+      "Leviticus 17-18",
+      "Leviticus 19-21",
+      "Leviticus 22-24",
+      "Leviticus 25-26",
+      "Leviticus 27; Numbers 1-2",
+      "Numbers 3-4"
+    ]
+  },
+  {
+    "week": 12,
+    "startDate": "2026-03-16",
+    "endDate": "2026-03-22",
+    "dateLabel": "Mar 16–22",
+    "cfm": {
+      "title": "God Meant It unto Good",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/12?lang=eng",
+      "reading": "Genesis 42–50"
+    },
+    "chronological": [
+      "Numbers 5-7",
+      "Numbers 8-10",
+      "Numbers 11-12",
+      "Numbers 13-15",
+      "Psalm 90; Numbers 16",
+      "Numbers 17-19",
+      "Numbers 20-22"
+    ]
+  },
+  {
+    "week": 13,
+    "startDate": "2026-03-23",
+    "endDate": "2026-03-29",
+    "dateLabel": "Mar 23–29",
+    "cfm": {
+      "title": "I Have Remembered My Covenant",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/13?lang=eng",
+      "reading": "Exodus 1–6"
+    },
+    "chronological": [
+      "Numbers 23-24",
+      "Numbers 25-27",
+      "Numbers 28-29",
+      "Numbers 30-32",
+      "Numbers 33-35",
+      "Numbers 36; Deuteronomy 1",
+      "Deuteronomy 2-4"
+    ]
+  },
+  {
+    "week": 14,
+    "startDate": "2026-03-30",
+    "endDate": "2026-04-05",
+    "dateLabel": "Mar 30–Apr 5",
+    "cfm": {
+      "title": "He Will Swallow Up Death in Victory",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/14?lang=eng",
+      "reading": "Easter"
+    },
+    "chronological": [
+      "Deuteronomy 5-6",
+      "Deuteronomy 7-9",
+      "Deuteronomy 10-12",
+      "Deuteronomy 13-14",
+      "Deuteronomy 15-17",
+      "Deuteronomy 18-19",
+      "Deuteronomy 20-22"
+    ]
+  },
+  {
+    "week": 15,
+    "startDate": "2026-04-06",
+    "endDate": "2026-04-12",
+    "dateLabel": "Apr 6–12",
+    "cfm": {
+      "title": "Remember This Day, in Which Ye Came Out from Egypt",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/15?lang=eng",
+      "reading": "Exodus 7–13"
+    },
+    "chronological": [
+      "Deuteronomy 23-25",
+      "Deuteronomy 26-27",
+      "Deuteronomy 28-30",
+      "Deuteronomy 31-32",
+      "Deuteronomy 33-34; Psalm 91",
+      "Joshua 1-3",
+      "Joshua 4-5"
+    ]
+  },
+  {
+    "week": 16,
+    "startDate": "2026-04-13",
+    "endDate": "2026-04-19",
+    "dateLabel": "Apr 13–19",
+    "cfm": {
+      "title": "Stand Still, and See the Salvation of the Lord",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/16?lang=eng",
+      "reading": "Exodus 14–18"
+    },
+    "chronological": [
+      "Joshua 6-8",
+      "Joshua 9-10",
+      "Joshua 11-13",
+      "Joshua 14-16",
+      "Joshua 17-18",
+      "Joshua 19-21",
+      "Joshua 22-23"
+    ]
+  },
+  {
+    "week": 17,
+    "startDate": "2026-04-20",
+    "endDate": "2026-04-26",
+    "dateLabel": "Apr 20–26",
+    "cfm": {
+      "title": "All That the Lord Hath Spoken We Will Do",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/17?lang=eng",
+      "reading": "Exodus 19–20; 24; 31–34"
+    },
+    "chronological": [
+      "Joshua 24; Judges 1-2",
+      "Judges 3-4",
+      "Judges 5-7",
+      "Judges 8-10",
+      "Judges 11-12",
+      "Judges 13-15",
+      "Judges 16-17"
+    ]
+  },
+  {
+    "week": 18,
+    "startDate": "2026-04-27",
+    "endDate": "2026-05-03",
+    "dateLabel": "Apr 27–May 3",
+    "cfm": {
+      "title": "Holiness to the Lord",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/18?lang=eng",
+      "reading": "Exodus 35–40; Leviticus 1; 4; 16; 19"
+    },
+    "chronological": [
+      "Judges 18-20",
+      "Judges 21; Ruth 1-2",
+      "Ruth 3-4",
+      "1 Samuel 1-3",
+      "1 Samuel 4-5",
+      "1 Samuel 6-8",
+      "1 Samuel 9-11"
+    ]
+  },
+  {
+    "week": 19,
+    "startDate": "2026-05-04",
+    "endDate": "2026-05-10",
+    "dateLabel": "May 4–10",
+    "cfm": {
+      "title": "Rebel Not Ye against the Lord, Neither Fear",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/19?lang=eng",
+      "reading": "Numbers 11–14; 20–24; 27"
+    },
+    "chronological": [
+      "1 Samuel 12-13",
+      "1 Samuel 14-16",
+      "1 Samuel 17-18",
+      "1 Samuel 19-20; Psalm 11",
+      "Psalm 59; 1 Samuel 21-22",
+      "1 Samuel 23-24",
+      "Psalm 7, 27, 31"
+    ]
+  },
+  {
+    "week": 20,
+    "startDate": "2026-05-11",
+    "endDate": "2026-05-17",
+    "dateLabel": "May 11–17",
+    "cfm": {
+      "title": "Beware Lest Thou Forget the Lord",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/20?lang=eng",
+      "reading": "Deuteronomy 6–8; 15; 18; 29–30; 34"
+    },
+    "chronological": [
+      "Psalm 34, 52",
+      "Psalm 56, 120, 140-142",
+      "1 Samuel 25-27",
+      "Psalm 17, 35",
+      "Psalm 54, 63; 1 Samuel 28",
+      "1 Samuel 29-30",
+      "1 Samuel 31; Psalm 18; Psalm 121, 123-125, 128"
+    ]
+  },
+  {
+    "week": 21,
+    "startDate": "2026-05-18",
+    "endDate": "2026-05-24",
+    "dateLabel": "May 18–24",
+    "cfm": {
+      "title": "Be Strong and of a Good Courage",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/21?lang=eng",
+      "reading": "Joshua 1–8; 23–24"
+    },
+    "chronological": [
+      "Psalm 121, 123-125, 129-130; 2 Samuel 1",
+      "2 Samuel 2-3",
+      "2 Samuel 4; Psalm 6, 8",
+      "Psalm 9-10",
+      "Psalm 14, 16, 19",
+      "Psalm 21; 1 Chronicles 1-2",
+      "Psalm 43-44"
+    ]
+  },
+  {
+    "week": 22,
+    "startDate": "2026-05-25",
+    "endDate": "2026-05-31",
+    "dateLabel": "May 25–31",
+    "cfm": {
+      "title": "The Lord Raised Up a Deliverer",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/22?lang=eng",
+      "reading": "Judges 2–4; 6–8; 13–16"
+    },
+    "chronological": [
+      "Psalm 45, 49, 84",
+      "Psalm 85, 87",
+      "1 Chronicles 3-5",
+      "Psalm 73, 77-78",
+      "1 Chronicles 6; Psalm 81, 88, 92-93",
+      "1 Chronicles 7-9",
+      "1 Chronicles 10; Psalm 102"
+    ]
+  },
+  {
+    "week": 23,
+    "startDate": "2026-06-01",
+    "endDate": "2026-06-07",
+    "dateLabel": "Jun 1–7",
+    "cfm": {
+      "title": "My Heart Rejoiceth in the Lord",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/23?lang=eng",
+      "reading": "Ruth; 1 Samuel 1–7"
+    },
+    "chronological": [
+      "Psalm 103-104; 2 Samuel 5:1-10, 1 Chronicles 11",
+      "2 Samuel 5:1-10, 1 Chronicles 12; Psalm 133",
+      "Psalm 106-107; 2 Samuel 5:11-6:23, 1 Chronicles 13",
+      "2 Samuel 5:11-6:23, 1 Chronicles 14-16",
+      "Psalm 1-2",
+      "Psalm 15, 22-23",
+      "Psalm 24, 47"
+    ]
+  },
+  {
+    "week": 24,
+    "startDate": "2026-06-08",
+    "endDate": "2026-06-14",
+    "dateLabel": "Jun 8–14",
+    "cfm": {
+      "title": "The Lord Looketh on the Heart",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/24?lang=eng",
+      "reading": "1 Samuel 8–10; 13; 15–16"
+    },
+    "chronological": [
+      "Psalm 68, 89, 96",
+      "Psalm 100-101, 105",
+      "Psalm 132; 2 Samuel 7, 1 Chronicles 17",
+      "2 Samuel 8-9, 1 Chronicles 18; Psalm 20, 33",
+      "Psalm 60, 75",
+      "Psalm 76, 83, 95",
+      "Psalm 108-110"
+    ]
+  },
+  {
+    "week": 25,
+    "startDate": "2026-06-15",
+    "endDate": "2026-06-21",
+    "dateLabel": "Jun 15–21",
+    "cfm": {
+      "title": "The Battle Is the Lord's",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/25?lang=eng",
+      "reading": "1 Samuel 17–18; 24–26; 2 Samuel 5–7"
+    },
+    "chronological": [
+      "2 Samuel 10, 1 Chronicles 19; Psalm 53",
+      "Psalm 139, 143-145",
+      "2 Samuel 11-12, 1 Chronicles 20; Psalm 32",
+      "Psalm 51, 86, 122",
+      "2 Samuel 13-15",
+      "Psalm 3-4",
+      "Psalm 12-13, 28"
+    ]
+  },
+  {
+    "week": 26,
+    "startDate": "2026-06-22",
+    "endDate": "2026-06-28",
+    "dateLabel": "Jun 22–28",
+    "cfm": {
+      "title": "Hear Thou in Heaven Their Prayer",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/26?lang=eng",
+      "reading": "2 Samuel 11–12; 1 Kings 3; 6–9; 11"
+    },
+    "chronological": [
+      "Psalm 55; 2 Samuel 16",
+      "2 Samuel 17-18; Psalm 26",
+      "Psalm 40, 58, 61",
+      "Psalm 62, 64",
+      "2 Samuel 19-21",
+      "Psalm 5, 38, 41-42",
+      "2 Samuel 22-23; Psalm 57"
+    ]
+  },
+  {
+    "week": 27,
+    "startDate": "2026-06-29",
+    "endDate": "2026-07-05",
+    "dateLabel": "Jun 29–Jul 5",
+    "cfm": {
+      "title": "If the Lord Be God, Follow Him",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/27?lang=eng",
+      "reading": "1 Kings 12–13; 17–22"
+    },
+    "chronological": [
+      "Psalm 95, 97-99",
+      "2 Samuel 24, 1 Chronicles 21-22",
+      "Psalm 30, 108-109",
+      "Psalm 110; 1 Chronicles 23",
+      "1 Chronicles 24-25; Psalm 131, 138-139, 143",
+      "Psalm 131, 138-139, 144-145",
+      "1 Chronicles 26-28"
+    ]
+  },
+  {
+    "week": 28,
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-12",
+    "dateLabel": "Jul 6–12",
+    "cfm": {
+      "title": "There Is a Prophet in Israel",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/28?lang=eng",
+      "reading": "2 Kings 2–7"
+    },
+    "chronological": [
+      "1 Chronicles 29; Psalm 111, 127",
+      "Psalm 112-113",
+      "Psalm 114-116",
+      "Psalm 117-118",
+      "1 Kings 1-2; Psalm 37",
+      "Psalm 71, 94; Psalm 72, Song of Songs 1",
+      "Psalm 72, Song of Songs 2-3"
+    ]
+  },
+  {
+    "week": 29,
+    "startDate": "2026-07-13",
+    "endDate": "2026-07-19",
+    "dateLabel": "Jul 13–19",
+    "cfm": {
+      "title": "He Trusted in the Lord God of Israel",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/29?lang=eng",
+      "reading": "2 Kings 16–25"
+    },
+    "chronological": [
+      "Psalm 72, Song of Songs 4-6",
+      "Psalm 72, Song of Songs 7-8",
+      "Proverbs 1-3",
+      "Proverbs 4-6",
+      "Proverbs 7-8",
+      "Proverbs 9-11",
+      "Proverbs 12-13"
+    ]
+  },
+  {
+    "week": 30,
+    "startDate": "2026-07-20",
+    "endDate": "2026-07-26",
+    "dateLabel": "Jul 20–26",
+    "cfm": {
+      "title": "Our Eyes Are upon Thee",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/30?lang=eng",
+      "reading": "2 Chronicles 14–20; 26; 30"
+    },
+    "chronological": [
+      "Proverbs 14-16",
+      "Proverbs 17-19",
+      "Proverbs 20-21",
+      "Proverbs 22-24",
+      "1 Kings 3-4, 2 Chronicles 1; Psalm 72",
+      "Proverbs 25-27",
+      "Proverbs 28-29; Ecclesiastes 1"
+    ]
+  },
+  {
+    "week": 31,
+    "startDate": "2026-07-27",
+    "endDate": "2026-08-02",
+    "dateLabel": "Jul 27–Aug 2",
+    "cfm": {
+      "title": "I Am Doing a Great Work",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/31?lang=eng",
+      "reading": "Ezra 1; 3–7; Nehemiah 2; 4–6; 8"
+    },
+    "chronological": [
+      "Ecclesiastes 2-3",
+      "Ecclesiastes 4-6",
+      "Ecclesiastes 7-8",
+      "Ecclesiastes 9-11",
+      "Ecclesiastes 12; 1 Kings 5-6, 2 Chronicles 2-3",
+      "1 Kings 7, 2 Chronicles 4; 1 Kings 8, 2 Chronicles 5",
+      "2 Chronicles 6-7; Psalm 136"
+    ]
+  },
+  {
+    "week": 32,
+    "startDate": "2026-08-03",
+    "endDate": "2026-08-09",
+    "dateLabel": "Aug 3–9",
+    "cfm": {
+      "title": "Thou Art Come … for Such a Time as This",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/32?lang=eng",
+      "reading": "Esther"
+    },
+    "chronological": [
+      "Psalms 134, 146-147",
+      "Psalms 134, 148-150",
+      "1 Kings 9, 2 Chronicles 8; Proverbs 30-31",
+      "1 Kings 10-11, 2 Chronicles 9; Ecclesiastes 1",
+      "Ecclesiastes 2-4",
+      "Ecclesiastes 5-6",
+      "Ecclesiastes 7-9"
+    ]
+  },
+  {
+    "week": 33,
+    "startDate": "2026-08-10",
+    "endDate": "2026-08-16",
+    "dateLabel": "Aug 10–16",
+    "cfm": {
+      "title": "Yet Will I Trust in Him",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/33?lang=eng",
+      "reading": "Job 1–3; 12–14; 19; 21–24; 38–40; 42"
+    },
+    "chronological": [
+      "Ecclesiastes 10-11",
+      "Ecclesiastes 12; 1 Kings 12-13",
+      "1 Kings 14; 2 Chronicles 10-11",
+      "2 Chronicles 12; 1 Kings 15:1-24, 2 Chronicles 13",
+      "1 Kings 15:1-24, 2 Chronicles 14-16",
+      "1 Kings 15:25-16:34, 2 Chronicles 17; 1 Kings 17",
+      "1 Kings 18-20"
+    ]
+  },
+  {
+    "week": 34,
+    "startDate": "2026-08-17",
+    "endDate": "2026-08-23",
+    "dateLabel": "Aug 17–23",
+    "cfm": {
+      "title": "The Lord Is My Shepherd",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/34?lang=eng",
+      "reading": "Psalms 1–2; 8; 19–33; 40; 46"
+    },
+    "chronological": [
+      "1 Kings 21; 1 Kings 22, 2 Chronicles 18; 2 Chronicles 19",
+      "2 Chronicles 20-21",
+      "2 Chronicles 22-23; Obadiah",
+      "Psalms 82-83",
+      "2 Kings 1-3",
+      "2 Kings 4-6",
+      "2 Kings 7-8"
+    ]
+  },
+  {
+    "week": 35,
+    "startDate": "2026-08-24",
+    "endDate": "2026-08-30",
+    "dateLabel": "Aug 24–30",
+    "cfm": {
+      "title": "I Will Declare What He Hath Done for My Soul",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/35?lang=eng",
+      "reading": "Psalms 49–51; 61–66; 69–72; 77–78; 85–86"
+    },
+    "chronological": [
+      "2 Kings 9-11",
+      "2 Kings 12-13, 2 Chronicles 24; 2 Kings 14, 2 Chronicles 25",
+      "Jonah 1-3",
+      "Jonah 4; 2 Kings 15, 2 Chronicles 26; Isaiah 1",
+      "Isaiah 2-3",
+      "Isaiah 4-6",
+      "Isaiah 7-8"
+    ]
+  },
+  {
+    "week": 36,
+    "startDate": "2026-08-31",
+    "endDate": "2026-09-06",
+    "dateLabel": "Aug 31–Sep 6",
+    "cfm": {
+      "title": "Let Every Thing That Hath Breath Praise the Lord",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/36?lang=eng",
+      "reading": "Psalms 102–103; 110; 116–119; 127–128; 135–139; 146–150"
+    },
+    "chronological": [
+      "Amos 1-3",
+      "Amos 4-6",
+      "Amos 7-8",
+      "Amos 9; 2 Chronicles 27; Isaiah 9",
+      "Isaiah 10-11",
+      "Isaiah 12; Micah 1-2",
+      "Micah 3-5"
+    ]
+  },
+  {
+    "week": 37,
+    "startDate": "2026-09-07",
+    "endDate": "2026-09-13",
+    "dateLabel": "Sep 7–13",
+    "cfm": {
+      "title": "He Shall Direct Thy Paths",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/37?lang=eng",
+      "reading": "Proverbs 1–4; 15–16; 22; 31; Ecclesiastes 1–3; 11–12"
+    },
+    "chronological": [
+      "Micah 6-7",
+      "2 Kings 16-17, 2 Chronicles 28; Isaiah 13-14",
+      "Isaiah 15-16",
+      "Isaiah 17-19",
+      "Isaiah 20-22",
+      "Isaiah 23-24",
+      "Isaiah 25-27"
+    ]
+  },
+  {
+    "week": 38,
+    "startDate": "2026-09-14",
+    "endDate": "2026-09-20",
+    "dateLabel": "Sep 14–20",
+    "cfm": {
+      "title": "God Is My Salvation",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/38?lang=eng",
+      "reading": "Isaiah 1–12"
+    },
+    "chronological": [
+      "2 Kings 18:1-8, 2 Chronicles 29-30",
+      "2 Kings 18:1-8, 2 Chronicles 31; Psalm 48; Hosea 1",
+      "Hosea 2-3",
+      "Hosea 4-6",
+      "Hosea 7-9",
+      "Hosea 10-11",
+      "Hosea 12-14"
+    ]
+  },
+  {
+    "week": 39,
+    "startDate": "2026-09-21",
+    "endDate": "2026-09-27",
+    "dateLabel": "Sep 21–27",
+    "cfm": {
+      "title": "A Marvellous Work and a Wonder",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/39?lang=eng",
+      "reading": "Isaiah 13–14; 22; 24–30; 35"
+    },
+    "chronological": [
+      "Isaiah 28-29",
+      "Isaiah 30-32",
+      "Isaiah 33-35",
+      "Isaiah 36-37",
+      "Isaiah 38-39; Psalm 75",
+      "Isaiah 40-41",
+      "Isaiah 42-44"
+    ]
+  },
+  {
+    "week": 40,
+    "startDate": "2026-09-28",
+    "endDate": "2026-10-04",
+    "dateLabel": "Sep 28–Oct 4",
+    "cfm": {
+      "title": "Comfort Ye My People",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/40?lang=eng",
+      "reading": "Isaiah 40–49"
+    },
+    "chronological": [
+      "Isaiah 45-47",
+      "Isaiah 48; 2 Kings 18:13-19:37",
+      "Psalm 46, 76, 80",
+      "Isaiah 49-50",
+      "Isaiah 51-53",
+      "Isaiah 54-56",
+      "Isaiah 57-58"
+    ]
+  },
+  {
+    "week": 41,
+    "startDate": "2026-10-05",
+    "endDate": "2026-10-11",
+    "dateLabel": "Oct 5–11",
+    "cfm": {
+      "title": "He Hath Borne Our Griefs, and Carried Our Sorrows",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/41?lang=eng",
+      "reading": "Isaiah 50–57"
+    },
+    "chronological": [
+      "Isaiah 59-61",
+      "Isaiah 62-63",
+      "Isaiah 64-66",
+      "2 Kings 20-21; 2 Chronicles 32",
+      "2 Chronicles 33; Nahum 1",
+      "Nahum 2-3; 2 Kings 22-23, 2 Chronicles 34",
+      "2 Kings 22-23, 2 Chronicles 35; Zephaniah 1"
+    ]
+  },
+  {
+    "week": 42,
+    "startDate": "2026-10-12",
+    "endDate": "2026-10-18",
+    "dateLabel": "Oct 12–18",
+    "cfm": {
+      "title": "The Redeemer Shall Come to Zion",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/42?lang=eng",
+      "reading": "Isaiah 58–66"
+    },
+    "chronological": [
+      "Zephaniah 2-3; Jeremiah 1",
+      "Jeremiah 2-4",
+      "Jeremiah 5-6",
+      "Jeremiah 7-9",
+      "Jeremiah 10-11",
+      "Jeremiah 12-14",
+      "Jeremiah 15-17"
+    ]
+  },
+  {
+    "week": 43,
+    "startDate": "2026-10-19",
+    "endDate": "2026-10-25",
+    "dateLabel": "Oct 19–25",
+    "cfm": {
+      "title": "Before I Formed Thee in the Belly I Knew Thee",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43?lang=eng",
+      "reading": "Jeremiah 1–3; 7; 16–18; 20"
+    },
+    "chronological": [
+      "Jeremiah 18-19",
+      "Jeremiah 20-22",
+      "Jeremiah 23-24",
+      "Jeremiah 25-27",
+      "Jeremiah 28-30",
+      "Jeremiah 31-32",
+      "Jeremiah 33-35"
+    ]
+  },
+  {
+    "week": 44,
+    "startDate": "2026-10-26",
+    "endDate": "2026-11-01",
+    "dateLabel": "Oct 26–Nov 1",
+    "cfm": {
+      "title": "I Will Turn Their Mourning into Joy",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44?lang=eng",
+      "reading": "Jeremiah 31–33; 36–39; Lamentations 1; 3"
+    },
+    "chronological": [
+      "Jeremiah 36-37",
+      "Jeremiah 38-40",
+      "Psalm 74, 79",
+      "2 Kings 24-25, 2 Chronicles 36; Habakkuk 1-2",
+      "Habakkuk 3; Jeremiah 41-42",
+      "Jeremiah 43-44",
+      "Jeremiah 45-47"
+    ]
+  },
+  {
+    "week": 45,
+    "startDate": "2026-11-02",
+    "endDate": "2026-11-08",
+    "dateLabel": "Nov 2–8",
+    "cfm": {
+      "title": "A New Spirit Will I Put within You",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/45?lang=eng",
+      "reading": "Ezekiel 1–3; 33–34; 36–37; 47"
+    },
+    "chronological": [
+      "Jeremiah 48-49",
+      "Jeremiah 50-52",
+      "Lamentations 1-2; Lamentations 3:1-66, 4",
+      "Lamentations 3:1-66, 5; Ezekiel 1",
+      "Ezekiel 2-4",
+      "Ezekiel 5-6",
+      "Ezekiel 7-9"
+    ]
+  },
+  {
+    "week": 46,
+    "startDate": "2026-11-09",
+    "endDate": "2026-11-15",
+    "dateLabel": "Nov 9–15",
+    "cfm": {
+      "title": "There Is No Other God That Can Deliver",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/46?lang=eng",
+      "reading": "Daniel 1–7"
+    },
+    "chronological": [
+      "Ezekiel 10-12",
+      "Ezekiel 13-14",
+      "Ezekiel 15-17",
+      "Ezekiel 18-19",
+      "Ezekiel 20-22",
+      "Ezekiel 23-25",
+      "Ezekiel 26-27"
+    ]
+  },
+  {
+    "week": 47,
+    "startDate": "2026-11-16",
+    "endDate": "2026-11-22",
+    "dateLabel": "Nov 16–22",
+    "cfm": {
+      "title": "I Will Love Them Freely",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47?lang=eng",
+      "reading": "Hosea 1–6; 10–14; Joel"
+    },
+    "chronological": [
+      "Ezekiel 28-30",
+      "Ezekiel 31-32",
+      "Ezekiel 33-35",
+      "Ezekiel 36-38",
+      "Ezekiel 39-40",
+      "Ezekiel 41-43",
+      "Ezekiel 44-45"
+    ]
+  },
+  {
+    "week": 48,
+    "startDate": "2026-11-23",
+    "endDate": "2026-11-29",
+    "dateLabel": "Nov 23–29",
+    "cfm": {
+      "title": "Seek the Lord, and Ye Shall Live",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/48?lang=eng",
+      "reading": "Amos; Obadiah; Jonah"
+    },
+    "chronological": [
+      "Ezekiel 46-48",
+      "Joel 1-3",
+      "Daniel 1-2",
+      "Daniel 3-5",
+      "Daniel 6-7",
+      "Daniel 8-10",
+      "Daniel 11-12; Ezra 1"
+    ]
+  },
+  {
+    "week": 49,
+    "startDate": "2026-11-30",
+    "endDate": "2026-12-06",
+    "dateLabel": "Nov 30–Dec 6",
+    "cfm": {
+      "title": "He Delighteth in Mercy",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/49?lang=eng",
+      "reading": "Micah; Nahum; Habakkuk; Zephaniah"
+    },
+    "chronological": [
+      "Ezra 2-3",
+      "Ezra 4-6",
+      "Psalm 137; Haggai 1",
+      "Haggai 2; Zechariah 1-2",
+      "Zechariah 3-4",
+      "Zechariah 5-7",
+      "Zechariah 8-10"
+    ]
+  },
+  {
+    "week": 50,
+    "startDate": "2026-12-07",
+    "endDate": "2026-12-13",
+    "dateLabel": "Dec 7–13",
+    "cfm": {
+      "title": "Holiness unto the Lord",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/50?lang=eng",
+      "reading": "Haggai 1–2; Zechariah 1–4; 7–14"
+    },
+    "chronological": [
+      "Zechariah 11-12",
+      "Zechariah 13-14; Esther 1",
+      "Esther 2-3",
+      "Esther 4-6",
+      "Esther 7-9",
+      "Esther 10; Ezra 7",
+      "Ezra 8-10"
+    ]
+  },
+  {
+    "week": 51,
+    "startDate": "2026-12-14",
+    "endDate": "2026-12-20",
+    "dateLabel": "Dec 14–20",
+    "cfm": {
+      "title": "I Have Loved You, Saith the Lord",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/51?lang=eng",
+      "reading": "Malachi"
+    },
+    "chronological": [
+      "Nehemiah 1-2",
+      "Nehemiah 3-5",
+      "Nehemiah 6-8",
+      "Nehemiah 9-10",
+      "Nehemiah 11-13",
+      "Psalm 126; Malachi 1",
+      "Malachi 2-4"
+    ]
+  },
+  {
+    "week": 52,
+    "startDate": "2026-12-21",
+    "endDate": "2026-12-27",
+    "dateLabel": "Dec 21–27",
+    "cfm": {
+      "title": "We Have Waited for Him, and He Will Save Us",
+      "link": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/52?lang=eng",
+      "reading": "Christmas"
+    },
+    "chronological": [
+      "Isaiah 7:14; Isaiah 9:1-7",
+      "Isaiah 11:1-10",
+      "Isaiah 40:1-11",
+      "Isaiah 53",
+      "Isaiah 61:1-3",
+      "Micah 5:2-5",
+      "Psalm 2; Psalm 110"
+    ]
+  }
+]
