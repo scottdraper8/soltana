@@ -12,11 +12,25 @@
   box-sizing: border-box;
 }
 
+// Scrollbar styling for Firefox only
+// Use feature query to prevent scrollbar-color from overriding webkit styles in Chrome 121+
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba($purple, 0.7) $bg-0;
+  }
+}
+
 html {
   height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizelegibility;
+  background-color: $bg-0;
+
+  // Reserve space for scrollbar to prevent layout shift
+  // Only applies if browser supports it
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -40,13 +54,47 @@ body {
   background-repeat: no-repeat;
 }
 
+// Scrollbar styling for Chrome/Safari/Edge
+// Note: Chrome does not reliably support transparent scrollbar tracks on all systems.
+// Using dark background color to blend with page. Gradients work on thumb.
+*::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+  background: $bg-0;
+}
+
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-track-piece {
+  background: $bg-0;
+}
+
+*::-webkit-scrollbar-corner {
+  background: $bg-0;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: radial-gradient(ellipse at center, rgba($purple, 0.6), rgba($bg-3, 0.95));
+  border-radius: 999px;
+  border: 3px solid $bg-0;
+  cursor: pointer;
+  box-shadow:
+    6px 6px 12px rgb(0 0 0 / 50%),
+    -3px -3px 8px rgb(255 255 255 / 3%),
+    inset 0 1px 2px rgb(255 255 255 / 15%),
+    inset 0 -1px 1px rgb(0 0 0 / 20%);
+}
+
 a {
   color: $cyan;
   text-decoration: none;
+  transition: color 0.2s ease;
+}
 
-  &:hover {
-    text-decoration: underline;
-  }
+// Remove tap highlight and outlines from all buttons (including role=button)
+button,
+[role='button'] {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1,
@@ -71,7 +119,7 @@ h2 {
 }
 
 .app-shell {
-  width: min(1200px, calc(100% - 28px));
+  width: min(1500px, calc(100% - 28px));
   margin: 0 auto;
 
   &:not(.sticky-header) {

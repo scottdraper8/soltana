@@ -17,59 +17,130 @@
 .scroll {
   overflow: auto;
   border-radius: $radius-lg;
-  border: 1px solid rgb(255 255 255 / 7%);
-  background: linear-gradient(180deg, rgb(255 255 255 / 3%), rgb(0 0 0 / 10%));
-
-  @include neo-inset;
+  background: transparent;
 }
 
 table.timeline {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0;
+  border-spacing: 0 12px;
   min-width: 800px;
+  border: none;
 
-  thead th {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    text-align: center;
-    font-size: 18px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: $ink-2;
-    padding: 16px 14px;
-    border-bottom: 1px solid rgb(255 255 255 / 9%);
-    backdrop-filter: blur(8px);
+  thead {
+    background: $bg-2;
+    border-radius: $radius-lg $radius-lg 0 0;
 
-    @include gradient-table-header;
+    tr {
+      border: none;
+
+      th:first-child {
+        border-top-left-radius: $radius-lg;
+      }
+
+      th:last-child {
+        border-top-right-radius: $radius-lg;
+      }
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      text-align: center;
+      font-size: 25px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: $ink-1;
+      padding: 20px 14px 5px;
+      border: none !important;
+      outline: none !important;
+      backdrop-filter: blur(8px);
+      background: $bg-2;
+
+      // Each th gets a pseudo-element that extends down
+      // They all stack on top of each other to create a continuous bridge
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        height: 12px;
+        background: $bg-2;
+        z-index: 1;
+      }
+    }
   }
 
   tbody {
     td {
       padding: 12px;
-      border-bottom: 1px solid rgb(255 255 255 / 7%);
+      border-bottom: none;
       vertical-align: top;
       color: $ink-1;
     }
 
     tr {
-      background: linear-gradient(180deg, rgb(255 255 255 / 2%), rgb(0 0 0 / 10%));
+      position: relative;
+      background: linear-gradient(145deg, rgb(0 0 0 / 12%), rgb(0 0 0 / 5%));
+      border-radius: 14px;
+      transition: background 0.3s ease;
+      box-shadow:
+        // Deeper inset shadows for pronounced divot
+        inset 0 4px 12px rgb(0 0 0 / 45%),
+        inset 0 -3px 8px rgb(255 255 255 / 4%),
+        // Outer shadow to create raised border effect
+        0 2px 0 rgb(255 255 255 / 3%),
+        0 -2px 0 rgb(0 0 0 / 15%);
 
       &:nth-child(2n) {
-        background: linear-gradient(180deg, rgb(255 255 255 / 3%), rgb(0 0 0 / 12%));
+        background: linear-gradient(145deg, rgb(0 0 0 / 14%), rgb(0 0 0 / 6%));
       }
 
-      &:hover {
-        @include gradient-table-hover;
+      td {
+        &:first-child {
+          border-top-left-radius: 14px;
+          border-bottom-left-radius: 14px;
+        }
+
+        &:last-child {
+          border-top-right-radius: 14px;
+          border-bottom-right-radius: 14px;
+        }
+      }
+
+      .row-overlay {
+        position: absolute;
+        inset: 0;
+        display: block;
+        opacity: 0;
+        border-radius: 14px;
+        background: linear-gradient(
+          135deg,
+          rgba($pink, 0.06),
+          rgba($purple, 0.06),
+          rgba($cyan, 0.05)
+        );
+        transition: opacity 0.25s ease;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      &:hover:not(.current-week) .row-overlay {
+        opacity: 1;
       }
 
       &.current-week {
+        background: linear-gradient(145deg, rgba($green, 0.1), rgba($cyan, 0.06), rgb(0 0 0 / 5%));
+        transition: background 0.3s ease;
         box-shadow:
           inset 4px 0 0 $green,
+          inset 0 4px 12px rgb(0 0 0 / 45%),
+          inset 0 -3px 8px rgb(255 255 255 / 4%),
+          0 2px 0 rgb(255 255 255 / 3%),
+          0 -2px 0 rgb(0 0 0 / 15%),
           0 0 20px rgba($green, 0.15);
-
-        @include gradient-current-week;
 
         .weeknum {
           color: $green;
@@ -78,7 +149,28 @@ table.timeline {
         .dates {
           color: $ink-1;
         }
+
+        // Don't show overlay on current week
+        .row-overlay {
+          display: none;
+        }
       }
+    }
+  }
+}
+
+// Desktop only - first row connects to header (no top rounded corners)
+@media (width > 768px) {
+  table.timeline tbody tr:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    td:first-child {
+      border-top-left-radius: 0;
+    }
+
+    td:last-child {
+      border-top-right-radius: 0;
     }
   }
 }
@@ -123,7 +215,7 @@ table.timeline {
 // Individual day button - neumorphic raised state (unread)
 .day-button {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 10px;
   width: 100%;
   padding: 10px 14px;
@@ -132,24 +224,16 @@ table.timeline {
   text-align: left;
   font-family: inherit;
   font-size: inherit;
-  transition:
-    box-shadow 0.3s ease,
-    background 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.15s ease;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 
   @include neo-button-raised;
 
   &:hover:not([disabled]) {
-    transform: translateY(-1px);
     box-shadow:
-      8px 8px 20px rgb(0 0 0 / 55%),
-      -5px -5px 14px rgb(255 255 255 / 7%),
+      8px 8px 20px $shadow-lo,
+      -5px -5px 14px $shadow-hi,
       inset 0 1px 0 rgb(255 255 255 / 10%);
-  }
-
-  &:active:not([disabled]) {
-    transform: translateY(1px);
   }
 
   // Read state - pressed/inset neumorphic effect
@@ -161,7 +245,6 @@ table.timeline {
     }
 
     &:hover:not([disabled]) {
-      transform: none;
       box-shadow:
         inset 5px 5px 12px rgb(0 0 0 / 45%),
         inset -3px -3px 8px rgb(255 255 255 / 5%);
@@ -172,10 +255,6 @@ table.timeline {
   &--empty {
     opacity: 0.4;
     cursor: not-allowed;
-
-    &:hover {
-      transform: none;
-    }
   }
 
   &[disabled] {
@@ -189,11 +268,12 @@ table.timeline {
   font-size: 18px;
   color: $cyan;
   letter-spacing: 0.04em;
-  min-width: 68px;
-  transition: color 0.3s ease;
+  min-width: 6ch;
 }
 
 .day-reading {
+  min-width: 0;
+  flex: 1 1 auto;
   color: $ink-1;
   font-size: 19px;
   letter-spacing: 0.02em;
@@ -274,6 +354,7 @@ table.timeline {
 
   &:hover {
     color: $pink;
+    text-decoration: none;
   }
 }
 
@@ -306,8 +387,8 @@ table.timeline {
   }
 
   .col-week {
-    border-bottom: 1px solid rgb(255 255 255 / 10%);
-    padding-bottom: 12px !important;
+    border-bottom: 1px solid $stroke;
+    padding-bottom: 12px;
     margin-bottom: 12px;
   }
 
@@ -322,6 +403,24 @@ table.timeline {
   .col-chrono {
     .day-buttons {
       gap: 8px;
+    }
+  }
+
+  // Remove hover effects on mobile/touch devices
+  .day-button {
+    &:hover:not([disabled]) {
+      // Reset to base raised state on hover (no hover effect)
+      box-shadow:
+        3px 3px 8px rgb(0 0 0 / 40%),
+        -2px -2px 6px rgb(255 255 255 / 4%),
+        inset 0 1px 0 rgb(255 255 255 / 6%);
+    }
+
+    &--read:hover:not([disabled]) {
+      // Reset to base pressed state on hover (no hover effect)
+      box-shadow:
+        inset 4px 4px 10px rgb(0 0 0 / 45%),
+        inset -2px -2px 6px rgb(255 255 255 / 4%);
     }
   }
 

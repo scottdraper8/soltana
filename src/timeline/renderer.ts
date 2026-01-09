@@ -62,6 +62,7 @@ function renderWeekRow(week: Week, isCurrentWeek: boolean): string {
   return `
             <tr data-week="${String(week.week)}" data-week-start="${week.startDate}" data-week-end="${week.endDate}"${currentClass}>
               <td class="col-week">
+                <span class="row-overlay" aria-hidden="true"></span>
                 <div class="weeknum">${formatWeekNumber(week.week)}</div>
                 <div class="dates">${week.dateLabel}</div>
               </td>

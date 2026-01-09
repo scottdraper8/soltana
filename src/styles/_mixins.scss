@@ -33,7 +33,7 @@
 @mixin gradient-table-hover {
   background:
     linear-gradient(135deg, rgba($pink, 0.1), rgba($purple, 0.1), rgba($cyan, 0.08)),
-    linear-gradient(180deg, rgb(255 255 255 / 3%), rgb(0 0 0 / 12%));
+    linear-gradient(180deg, rgb(255 255 255 / 3%), rgb(0 0 0 / 5%));
 }
 
 // Current week highlight gradient
@@ -48,21 +48,21 @@
   background: linear-gradient(145deg, rgba($purple, 0.25), rgba($cyan, 0.15));
 }
 
-// Neumorphic day button - raised (unread) state
+// Neumorphic day button - raised (unread) state - subtle, stays within divot
 @mixin neo-button-raised {
-  background: linear-gradient(145deg, rgb(255 255 255 / 6%), rgb(0 0 0 / 12%));
-  border: 1px solid rgb(255 255 255 / 8%);
+  background: linear-gradient(145deg, rgb(255 255 255 / 3%), rgb(0 0 0 / 6%));
+  border: 1px solid rgb(255 255 255 / 6%);
   box-shadow:
-    6px 6px 16px rgb(0 0 0 / 50%),
-    -4px -4px 12px rgb(255 255 255 / 6%),
-    inset 0 1px 0 rgb(255 255 255 / 8%);
+    3px 3px 8px rgb(0 0 0 / 40%),
+    -2px -2px 6px rgb(255 255 255 / 4%),
+    inset 0 1px 0 rgb(255 255 255 / 6%);
 }
 
-// Neumorphic day button - pressed (read) state
+// Neumorphic day button - pressed (read) state - stays recessed
 @mixin neo-button-pressed {
-  background: linear-gradient(145deg, rgba($green, 0.15), rgba($cyan, 0.1));
-  border: 1px solid rgba($green, 0.2);
+  background: linear-gradient(145deg, rgba($green, 0.1), rgba($cyan, 0.06));
+  border: 1px solid rgba($green, 0.15);
   box-shadow:
-    inset 5px 5px 12px rgb(0 0 0 / 45%),
-    inset -3px -3px 8px rgb(255 255 255 / 5%);
+    inset 4px 4px 10px rgb(0 0 0 / 45%),
+    inset -2px -2px 6px rgb(255 255 255 / 4%);
 }
