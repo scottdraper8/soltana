@@ -8,6 +8,8 @@ export interface CfmLesson {
   link: string;
   /** Scripture reading assignment for the week */
   reading: string;
+  /** First paragraph excerpt from the lesson (optional) */
+  excerpt?: string;
 }
 
 /**
@@ -28,23 +30,3 @@ export interface Week {
   /** Array of 7 daily readings (empty strings for days without readings) */
   chronological: string[];
 }
-
-/**
- * Badge types for tracking different Bible resources.
- */
-export type ResourceBadge = 'kjv' | 'mac' | 'heb' | 'esv';
-
-/**
- * Labels for each resource badge type.
- */
-export const RESOURCE_LABELS: Record<ResourceBadge, string> = {
-  kjv: 'KJV-JST',
-  mac: 'LSB-Mac',
-  heb: 'Heb',
-  esv: 'ESV',
-};
-
-/**
- * Order of track checkboxes displayed in each row.
- */
-export const TRACK_ORDER: ResourceBadge[] = ['kjv', 'mac', 'heb', 'esv'];

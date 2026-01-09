@@ -1,24 +1,35 @@
 @use 'variables' as *;
 
+@font-face {
+  font-family: 'TriniteNo2';
+  src: url('../assets/fonts/TriniteNo2 Roman.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
 
 html {
   height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
 }
 
 body {
   min-height: 100%;
   margin: 0;
+  padding: 0;
   color: $ink-0;
   font:
-    14px/1.5 system-ui,
-    -apple-system,
-    'Segoe UI',
-    Roboto,
-    Arial,
-    sans-serif;
+    20px/1.6 'TriniteNo2',
+    Georgia,
+    'Times New Roman',
+    serif;
+  letter-spacing: 0.03em;
   background:
     radial-gradient(ellipse 1200px 800px at 15% 10%, rgba($purple, 0.18), transparent 60%),
     radial-gradient(ellipse 900px 700px at 80% 15%, rgba($cyan, 0.14), transparent 55%),
@@ -41,17 +52,18 @@ a {
 h1,
 h2 {
   margin: 0 0 8px;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.03em;
 }
 
 h1 {
-  font-size: 28px;
-  line-height: 1.15;
+  font-size: 48px;
+  line-height: 1.2;
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 24px;
   color: $ink-1;
+  letter-spacing: 0.02em;
 }
 
 .muted {
@@ -60,5 +72,9 @@ h2 {
 
 .app-shell {
   width: min(1200px, calc(100% - 28px));
-  margin: 20px auto;
+  margin: 0 auto;
+
+  &:not(.sticky-header) {
+    margin-top: 20px;
+  }
 }

@@ -61,59 +61,21 @@
   background: linear-gradient(145deg, rgba($purple, 0.25), rgba($cyan, 0.15));
 }
 
-// Badge base styles
-@mixin badge-base {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3px 8px;
-  border-radius: 999px;
-  border: 1px solid rgb(255 255 255 / 10%);
-  font-size: 12px;
-  letter-spacing: 0.02em;
-  color: $ink-0;
-}
-
-// Badge color variants
-@mixin badge-variant($color1, $color2) {
-  background: linear-gradient(135deg, rgba($color1, 0.18), rgba($color2, 0.12));
-}
-
-// Checkbox neumorphic styling
-@mixin checkbox-neo {
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
+// Neumorphic day button - raised (unread) state
+@mixin neo-button-raised {
+  background: linear-gradient(145deg, rgb(255 255 255 / 6%), rgb(0 0 0 / 12%));
   border: 1px solid rgb(255 255 255 / 8%);
-  background: linear-gradient(145deg, rgb(255 255 255 / 5%), rgb(0 0 0 / 15%));
   box-shadow:
-    inset 3px 3px 6px rgb(0 0 0 / 40%),
-    inset -3px -3px 6px rgb(255 255 255 / 5%);
-  cursor: pointer;
-  transition: all 0.2s ease;
-  position: relative;
+    6px 6px 16px rgb(0 0 0 / 50%),
+    -4px -4px 12px rgb(255 255 255 / 6%),
+    inset 0 1px 0 rgb(255 255 255 / 8%);
+}
 
-  &:hover {
-    background: linear-gradient(145deg, rgb(255 255 255 / 8%), rgb(0 0 0 / 12%));
-  }
-
-  &:checked {
-    background: linear-gradient(135deg, rgba($purple, 0.35), rgba($cyan, 0.25));
-    border: 1px solid rgba($purple, 0.3);
-    box-shadow:
-      inset 4px 4px 8px rgb(0 0 0 / 50%),
-      inset -2px -2px 6px rgb(255 255 255 / 10%);
-
-    &::after {
-      content: '✓';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: $ink-0;
-      font-size: 12px;
-      font-weight: bold;
-    }
-  }
+// Neumorphic day button - pressed (read) state
+@mixin neo-button-pressed {
+  background: linear-gradient(145deg, rgba($green, 0.15), rgba($cyan, 0.1));
+  border: 1px solid rgba($green, 0.2);
+  box-shadow:
+    inset 5px 5px 12px rgb(0 0 0 / 45%),
+    inset -3px -3px 8px rgb(255 255 255 / 5%);
 }

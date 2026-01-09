@@ -1,8 +1,7 @@
-let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
-let isScrolling = false;
+let isHeaderVisible = true;
 
 /**
- * Initializes the sticky header auto-hide behavior.
+ * Initializes the sticky header click-to-hide behavior.
  */
 export function initStickyHeader(): void {
   const header = document.getElementById('main-header');
@@ -11,39 +10,64 @@ export function initStickyHeader(): void {
     return;
   }
 
-  window.addEventListener(
-    'scroll',
-    () => {
-      handleScroll(header);
-    },
-    { passive: true }
-  );
+  // Check if we're on mobile
+  const isMobile = () => window.innerWidth <= 768;
+
+  // Only add click listener if not on mobile
+  if (!isMobile()) {
+    // Click anywhere on page to hide header when in sticky mode
+    document.addEventListener('click', (event) => {
+      handlePageClick(header, event);
+    });
+
+    // Show header when scrolling starts (if hidden and past threshold)
+    window.addEventListener(
+      'scroll',
+      () => {
+        handleScroll(header);
+      },
+      { passive: true }
+    );
+  }
+
+  // Re-check on resize to handle orientation changes
+  window.addEventListener('resize', () => {
+    if (isMobile()) {
+      header.classList.remove('header-hidden');
+    }
+  });
+}
+
+/**
+ * Handles click events anywhere on the page.
+ * Hides header when clicked while in sticky mode.
+ */
+function handlePageClick(header: HTMLElement, _event: MouseEvent): void {
+  const scrollY = window.scrollY;
+
+  // Only hide if we're past the threshold (in sticky mode)
+  if (scrollY > 100 && !header.classList.contains('header-hidden')) {
+    isHeaderVisible = false;
+    header.classList.add('header-hidden');
+  }
 }
 
 /**
  * Handles scroll events for the sticky header.
- * Shows header while scrolling, hides immediately when scrolling stops.
+ * Shows header when scrolling if it was hidden.
  */
 function handleScroll(header: HTMLElement): void {
   const scrollY = window.scrollY;
 
-  if (!isScrolling && scrollY > 100) {
-    isScrolling = true;
+  // Show header when scrolling if it's hidden and we're past threshold
+  if (scrollY > 100 && !isHeaderVisible) {
+    isHeaderVisible = true;
     header.classList.remove('header-hidden');
   }
 
-  if (scrollTimeout) {
-    clearTimeout(scrollTimeout);
-  }
-
-  scrollTimeout = setTimeout(() => {
-    isScrolling = false;
-    if (scrollY > 100) {
-      header.classList.add('header-hidden');
-    }
-  }, 50);
-
+  // Always show header when at top
   if (scrollY <= 100) {
+    isHeaderVisible = true;
     header.classList.remove('header-hidden');
   }
 }

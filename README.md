@@ -43,6 +43,7 @@ npm run format
 ## Data Structure
 
 Weekly data is stored in `src/data/weeks.json` and typed through `src/types/timeline.ts`. Each week includes:
+
 - Week number and date range
 - Come, Follow Me lesson title, link, and reading assignment
 - Seven daily chronological readings (empty strings for days without readings)
