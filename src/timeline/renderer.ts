@@ -59,16 +59,15 @@ function renderWeekRow(week: Week, isCurrentWeek: boolean): string {
        </div>`
     : '';
 
-  // Background image element for current week with dynamic image from data
-  const currentWeekBg =
-    isCurrentWeek && week.cfm.image
-      ? `<span class="current-week-bg" style="background-image: url('/src/${week.cfm.image}')" aria-hidden="true"></span>`
-      : '';
+  // Background image element for all weeks with dynamic image from data
+  const weekBg = week.cfm.image
+    ? `<span class="week-bg" style="background-image: url('/src/${week.cfm.image}')" aria-hidden="true"></span>`
+    : '';
 
   return `
             <tr data-week="${String(week.week)}" data-week-start="${week.startDate}" data-week-end="${week.endDate}"${currentClass}>
               <td class="col-week">
-                ${currentWeekBg}
+                ${weekBg}
                 <span class="row-overlay" aria-hidden="true"></span>
                 <div class="weeknum">${formatWeekNumber(week.week)}</div>
                 <div class="dates">${week.dateLabel}</div>

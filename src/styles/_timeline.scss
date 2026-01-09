@@ -127,8 +127,8 @@ table.timeline {
         z-index: 0;
       }
 
-      // Background image for current week - positioned behind all content
-      .current-week-bg {
+      // Background image week rows - positioned behind all content
+      .week-bg {
         position: absolute;
         inset: 0;
         display: block;
@@ -170,8 +170,6 @@ table.timeline {
         .row-overlay {
           display: none;
         }
-
-        // Background image is set dynamically via inline style in renderer
       }
     }
   }
