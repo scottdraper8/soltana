@@ -211,24 +211,6 @@ table.timeline {
   color: $ink-0;
 }
 
-.weeknum-full {
-  display: inline;
-}
-
-.weeknum-short {
-  display: none;
-}
-
-@media (width <= 768px) {
-  .weeknum-full {
-    display: none;
-  }
-
-  .weeknum-short {
-    display: inline;
-  }
-}
-
 .dates {
   margin-top: 6px;
   font-size: 19px;
@@ -246,7 +228,7 @@ table.timeline {
 
 .cfm-excerpt {
   margin-top: 8px;
-  font-size: 18px; // Scaled up from 16px
+  font-size: 18px;
   font-style: italic;
   color: rgba($ink-1, 0.85);
   line-height: 1.5;
@@ -262,11 +244,22 @@ table.timeline {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 5; // Default to 5 lines, will be dynamic
-  line-clamp: 5;
+  -webkit-line-clamp: 8;
+  line-clamp: 8;
   -webkit-box-orient: vertical;
   line-break: auto;
   overflow-wrap: break-word;
+
+  // Reduce lines on narrower screens to prevent row height expansion
+  @media (width <= 1024px) {
+    -webkit-line-clamp: 7;
+    line-clamp: 7;
+  }
+
+  @media (width <= 900px) {
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
+  }
 }
 
 .cfm-excerpt-more {

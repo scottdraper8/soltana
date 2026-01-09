@@ -98,50 +98,6 @@ function attachDayButtonHandlers(): void {
 }
 
 /**
- * Adjusts line-clamp values for excerpts dynamically based on available space.
- */
-function adjustExcerptLineClamps(): void {
-  const excerpts = document.querySelectorAll<HTMLElement>('.cfm-excerpt-text');
-
-  excerpts.forEach((excerpt) => {
-    const cfmCell = excerpt.closest('.col-cfm');
-    const row = excerpt.closest('tr');
-    if (!cfmCell || !row) return;
-
-    // Get all the content in the CFM column before the excerpt
-    const titleLink = cfmCell.querySelector('a');
-    const readingDiv = cfmCell.querySelector('.cfm-reading');
-    const excerptContainer = cfmCell.querySelector('.cfm-excerpt');
-
-    if (!titleLink || !readingDiv || !excerptContainer) return;
-
-    // Calculate heights
-    const titleHeight = (titleLink as HTMLElement).offsetHeight;
-    const readingHeight = (readingDiv as HTMLElement).offsetHeight;
-    const excerptMarginTop = 8; // from CSS
-
-    // Get the chronological column to match its height
-    const chronoCell = row.querySelector<HTMLElement>('.col-chrono');
-    if (!chronoCell) return;
-
-    const chronoHeight = chronoCell.offsetHeight;
-
-    // Available space for excerpt is: chrono column height - title - reading - margins/padding
-    const cellPadding = 32; // Approximate padding in cell
-    const availableHeight =
-      chronoHeight - titleHeight - readingHeight - excerptMarginTop - cellPadding;
-
-    // Calculate how many lines can fit
-    const lineHeight = parseFloat(getComputedStyle(excerpt).lineHeight);
-    const maxLines = Math.max(2, Math.floor(availableHeight / lineHeight));
-
-    // Apply the calculated line-clamp (cap at 8 lines for very tall rows)
-    excerpt.style.webkitLineClamp = String(Math.min(maxLines, 8));
-    excerpt.style.setProperty('line-clamp', String(Math.min(maxLines, 8)));
-  });
-}
-
-/**
  * Renders all week rows into the timeline table body.
  */
 export function renderTimeline(weeks: Week[], currentWeek: number): void {
@@ -160,14 +116,6 @@ export function renderTimeline(weeks: Week[], currentWeek: number): void {
 
   // Attach click handlers after rendering
   attachDayButtonHandlers();
-
-  // Adjust excerpt line-clamps after rendering
-  requestAnimationFrame(() => {
-    adjustExcerptLineClamps();
-  });
-
-  // Re-adjust on window resize
-  window.addEventListener('resize', adjustExcerptLineClamps);
 }
 
 /**

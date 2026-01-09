@@ -40,10 +40,9 @@ export function getCurrentWeekNumber(weeks: Week[]): number {
 }
 
 /**
- * Formats a week number for display with both full and abbreviated versions.
- * Returns HTML with separate spans for responsive display.
+ * Formats a week number for display.
  */
 export function formatWeekNumber(week: number): string {
   const padded = week.toString().padStart(2, '0');
-  return `<span class="weeknum-full">Week ${padded}</span><span class="weeknum-short">W${padded}</span>`;
+  return `Week ${padded}`;
 }
