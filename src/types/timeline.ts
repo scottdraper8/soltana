@@ -10,6 +10,8 @@ export interface CfmLesson {
   reading: string;
   /** First paragraph excerpt from the lesson (optional) */
   excerpt?: string;
+  /** Path to banner image (relative to src/) */
+  image?: string;
 }
 
 /**
