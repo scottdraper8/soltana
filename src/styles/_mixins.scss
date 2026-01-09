@@ -14,25 +14,12 @@
     inset (-$size) (-$size) ($size * 2) rgb(255 255 255 / 5%);
 }
 
-// Neumorphic chip shadows
-@mixin neo-chip {
-  box-shadow:
-    6px 6px 14px rgb(0 0 0 / 35%),
-    -6px -6px 14px rgb(255 255 255 / 4%);
-}
-
 // Glass card background
 @mixin glass-card {
   border-radius: $radius-lg;
   border: 1px solid $stroke;
   background: linear-gradient(145deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 2%));
   backdrop-filter: blur(8px);
-}
-
-// Accent gradient (cyan-purple-pink)
-@mixin gradient-accent {
-  background: linear-gradient(90deg, rgba($cyan, 0.22), rgba($purple, 0.22), rgba($pink, 0.2));
-  border: 1px solid rgb(255 255 255 / 8%);
 }
 
 // Table header gradient

@@ -12,7 +12,7 @@ export function setCurrentWeekRow(weekNumber: number): void {
 /**
  * Scrolls the current week row into view.
  */
-export function scrollToCurrentWeek(): void {
+function scrollToCurrentWeek(): void {
   if (currentWeekRow) {
     currentWeekRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
@@ -73,8 +73,6 @@ function updateScrollNavVisibility(scrollNav: HTMLElement, scrollArrow: HTMLElem
  */
 export function initialScrollToCurrentWeek(): void {
   if (currentWeekRow) {
-    setTimeout(() => {
-      currentWeekRow?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 300);
+    setTimeout(scrollToCurrentWeek, 300);
   }
 }

@@ -11,7 +11,7 @@ function parseDate(dateStr: string): Date {
 /**
  * Determines if a given date falls within a week's date range.
  */
-export function isDateInWeek(date: Date, week: Week): boolean {
+function isDateInWeek(date: Date, week: Week): boolean {
   const start = parseDate(week.startDate);
   const end = new Date(week.endDate + 'T23:59:59');
   return date >= start && date <= end;

@@ -32,36 +32,3 @@ $shadow-lo: rgb(0 0 0 / 60%);
 $radius-lg: 18px;
 $radius-md: 14px;
 $radius-sm: 10px;
-
-// Spacing
-$pad: 14px;
-
-// CSS custom properties export
-:root {
-  --bg-0: #{$bg-0};
-  --bg-1: #{$bg-1};
-  --bg-2: #{$bg-2};
-  --bg-3: #{$bg-3};
-  --ink-0: #{$ink-0};
-  --ink-1: #{$ink-1};
-  --ink-2: #{$ink-2};
-  --cyan: #{$cyan};
-  --green: #{$green};
-  --orange: #{$orange};
-  --pink: #{$pink};
-  --purple: #{$purple};
-  --red: #{$red};
-  --yellow: #{$yellow};
-  --teal: #{$teal};
-  --indigo: #{$indigo};
-  --violet: #{$violet};
-  --magenta: #{$magenta};
-  --stroke: #{$stroke};
-  --glass: #{$glass};
-  --shadow-hi: #{$shadow-hi};
-  --shadow-lo: #{$shadow-lo};
-  --radius-lg: #{$radius-lg};
-  --radius-md: #{$radius-md};
-  --radius-sm: #{$radius-sm};
-  --pad: #{$pad};
-}
