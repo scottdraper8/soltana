@@ -127,6 +127,22 @@ table.timeline {
         z-index: 0;
       }
 
+      // Background image for current week - positioned behind all content
+      .current-week-bg {
+        position: absolute;
+        inset: 0;
+        display: block;
+        border-radius: 14px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.15;
+        mix-blend-mode: soft-light;
+        filter: brightness(0.6) contrast(1.5);
+        pointer-events: none;
+        z-index: -1;
+      }
+
       &:hover:not(.current-week) .row-overlay {
         opacity: 1;
       }
@@ -154,6 +170,8 @@ table.timeline {
         .row-overlay {
           display: none;
         }
+
+        // Background image is set dynamically via inline style in renderer
       }
     }
   }
