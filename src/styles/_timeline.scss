@@ -53,8 +53,6 @@ table.timeline {
       text-transform: uppercase;
       color: $ink-1;
       padding: 20px 14px 5px;
-      border: none !important;
-      outline: none !important;
       backdrop-filter: blur(8px);
       background: $bg-2;
 
@@ -148,15 +146,15 @@ table.timeline {
       }
 
       &.current-week {
-        background: linear-gradient(145deg, rgba($green, 0.1), rgba($cyan, 0.06), rgb(0 0 0 / 5%));
+        background: linear-gradient(145deg, rgba($green, 0.18), rgba($cyan, 0.12), rgb(0 0 0 / 5%));
         transition: background 0.3s ease;
         box-shadow:
-          inset 4px 0 0 $green,
+          inset 6px 0 0 $green,
           inset 0 4px 12px rgb(0 0 0 / 45%),
           inset 0 -3px 8px rgb(255 255 255 / 4%),
           0 2px 0 rgb(255 255 255 / 3%),
           0 -2px 0 rgb(0 0 0 / 15%),
-          0 0 20px rgba($green, 0.15);
+          inset 0 0 20px rgba($green, 0.15);
 
         .weeknum {
           color: $green;
@@ -175,19 +173,27 @@ table.timeline {
   }
 }
 
-// Desktop only - first row connects to header (no top rounded corners)
-@media (width > 768px) {
-  table.timeline tbody tr:first-child {
+// First row connects to header (no top rounded corners)
+table.timeline tbody tr:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  td:first-child {
+    border-top-left-radius: 0;
+  }
+
+  td:last-child {
+    border-top-right-radius: 0;
+  }
+
+  .week-bg {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+  }
 
-    td:first-child {
-      border-top-left-radius: 0;
-    }
-
-    td:last-child {
-      border-top-right-radius: 0;
-    }
+  .row-overlay {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 }
 
@@ -305,6 +311,7 @@ table.timeline {
   font-size: 28px;
   letter-spacing: 0.03em;
   color: $ink-0;
+  padding-left: 8px;
 }
 
 .dates {
@@ -312,6 +319,7 @@ table.timeline {
   font-size: 19px;
   color: $ink-2;
   letter-spacing: 0.02em;
+  padding-left: 8px;
 }
 
 .cfm-reading {

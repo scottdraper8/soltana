@@ -1,49 +1,110 @@
+<div align="center">
+
 # 2026 Old Testament Study Timeline
 
-A weekly study timeline that aligns the Come, Follow Me (OT 2026) curriculum with a chronological Old Testament reading plan. The timeline provides references for study using multiple Bible editions: KJV-JST, LSB-Mac, Hebrew Study Bible, and ESV Church History Bible.
+![Node.js](https://img.shields.io/badge/Node.js-24+-339933?logo=node.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?logo=vite&logoColor=white)
+![Sass](https://img.shields.io/badge/Sass-1.97-CC6699?logo=sass&logoColor=white)
+[![pre-commit](https://img.shields.io/badge/pre--commit-v4.4.0-FAB040?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+
+---
+
+
+*A weekly study timeline that aligns the Come, Follow Me (OT 2026) curriculum with a chronological Old Testament reading plan. Track your progress across multiple Bible editions with an elegant, neumorphic interface.*
+
+---
+
+</div>
 
 ## Features
 
-- **52-week plan**: Covers the full year of Old Testament study
-- **CFM integration**: Links to official Come, Follow Me lessons with weekly reading assignments
-- **Chronological readings**: Daily readings that provide chronological context alongside CFM studies
-- **Resource tracking**: Checkboxes for tracking progress across four Bible editions
-- **Current week highlighting**: Automatically highlights and scrolls to the current week
-- **Responsive design**: Neumorphic UI that works across devices
+### Study Organization
+- **52-week plan** covering the full year of Old Testament study
+- **CFM integration** with links to official Come, Follow Me lessons
+- **Chronological readings** providing historical context alongside topical studies
+- **Current week highlighting** that automatically scrolls to the present week
 
-## Technology
+### Modern Interface
+- **Neumorphic design** with depth and dimension
+- **Dynamic backgrounds** featuring CFM lesson banner images
+- **Responsive layout** that adapts to any device
+- **Smooth animations** and transitions throughout
 
-Built with TypeScript, Vite, and SCSS. Uses a modular architecture with separate modules for data, rendering, navigation, and utilities.
+## Quick Start
+
+**Prerequisites:**
+- Node.js 18 or higher
+- npm or yarn
+
+**Clone and setup:**
+
+```bash
+git clone https://github.com/YOUR_USERNAME/ot-2026-timeline.git
+cd ot-2026-timeline
+npm install
+npm run dev
+```
+
+The application will open at `http://localhost:5173`
 
 ## Development
 
-```bash
-# Install dependencies
-npm install
+### Available Scripts
 
-# Start development server
-npm run dev
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server with hot reload |
+| `npm run build` | Build for production with TypeScript compilation |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint and Stylelint checks |
+| `npm run format` | Format code with Prettier |
+| `npm run type-check` | Run TypeScript type checking |
 
-# Build for production
-npm run build
+### Project Structure
 
-# Preview production build
-npm run preview
-
-# Type checking
-npm run type-check
-
-# Linting
-npm run lint
-
-# Formatting
-npm run format
+```
+ot-2026-timeline/
+├── src/
+│   ├── assets/          # Images and static assets
+│   ├── data/            # Week data (weeks.json)
+│   ├── styles/          # Sass stylesheets
+│   ├── timeline/        # Core timeline components
+│   ├── types/           # TypeScript type definitions
+│   └── utils/           # Utility functions
+├── index.html           # Entry point
+└── package.json         # Dependencies and scripts
 ```
 
 ## Data Structure
 
-Weekly data is stored in `src/data/weeks.json` and typed through `src/types/timeline.ts`. Each week includes:
+Weekly data is stored in `src/data/weeks.json` and typed through `src/types/timeline.ts`.
 
-- Week number and date range
-- Come, Follow Me lesson title, link, and reading assignment
-- Seven daily chronological readings (empty strings for days without readings)
+Each week entry includes:
+
+- **Week metadata**: Number and date range
+- **CFM lesson**: Title, link, reading assignment, excerpt, and banner image
+- **Chronological readings**: Seven daily readings (empty strings for rest days)
+
+**Example week structure:**
+
+```json
+{
+  "week": 1,
+  "startDate": "2025-12-29",
+  "endDate": "2026-01-04",
+  "dateLabel": "Dec 29–Jan 4",
+  "cfm": {
+    "title": "The First Testament of Jesus Christ",
+    "link": "https://...",
+    "reading": "Introduction to the Old Testament",
+    "excerpt": "When you consider studying...",
+    "image": "assets/images/lesson_banner.jpg"
+  },
+  "chronological": [
+    "Epistle Dedicatory",
+    "Bible Chronology",
+    "", "", "", "", ""
+  ]
+}
+```
