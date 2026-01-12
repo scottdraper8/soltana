@@ -104,16 +104,6 @@ function renderWeekRow(week: Week, isCurrentWeek: boolean): string {
     </tr>`;
 }
 
-function renderTableHeader(): string {
-  const headerText = currentViewMode === 'lesson' ? 'Daily Reading' : 'Chronological Reading';
-  return `
-    <tr>
-      <th>Week</th>
-      <th>Come, Follow Me (OT 2026)</th>
-      <th>${headerText}</th>
-    </tr>`;
-}
-
 function handleDayButtonClick(event: Event): void {
   const button = event.currentTarget as HTMLButtonElement;
   const dayId = button.dataset.dayId;
@@ -130,31 +120,40 @@ function attachDayButtonHandlers(): void {
   });
 }
 
-function updateViewToggleStates(): void {
-  document.querySelectorAll('.view-toggle-btn').forEach((btn) => {
-    const mode = (btn as HTMLElement).dataset.viewMode as ViewMode;
-    btn.classList.toggle('view-toggle-btn--active', mode === currentViewMode);
-    btn.setAttribute('aria-pressed', String(mode === currentViewMode));
-  });
+function updateSortToggleState(): void {
+  const button = document.querySelector('.sort-toggle-btn');
+  if (!button) return;
+
+  const isLesson = currentViewMode === 'lesson';
+  (button as HTMLButtonElement).dataset.currentMode = currentViewMode;
+
+  const icon = button.querySelector('.sort-icon');
+  if (icon) {
+    icon.classList.toggle('sort-lesson', isLesson);
+    icon.classList.toggle('sort-chrono', !isLesson);
+  }
+
+  const tooltip = button.querySelector('.sort-tooltip');
+  if (tooltip) {
+    tooltip.innerHTML = isLesson ? 'Switch to Chronological Order' : 'Switch to Book Order';
+  }
 }
 
 export function renderTimeline(weeks: Week[], currentWeek: number): void {
   cachedWeeks = weeks;
   cachedCurrentWeek = currentWeek;
 
-  const thead = document.querySelector('.timeline thead');
   const tbody = document.querySelector('.timeline tbody');
-  if (!thead || !tbody) {
-    console.error('Timeline thead/tbody not found');
+  if (!tbody) {
+    console.error('Timeline tbody not found');
     return;
   }
 
   readDays = loadReadDays();
-  thead.innerHTML = renderTableHeader();
   tbody.innerHTML = weeks.map((week) => renderWeekRow(week, week.week === currentWeek)).join('\n');
 
   attachDayButtonHandlers();
-  updateViewToggleStates();
+  updateSortToggleState();
 }
 
 export function getWeekRow(weekNumber: number): HTMLTableRowElement | null {

@@ -14,8 +14,8 @@ function init(): void {
   const currentWeek = getCurrentWeekNumber(weeks);
 
   loadViewMode();
-  initViewToggle();
   renderTimeline(weeks, currentWeek);
+  initViewToggle();
   setCurrentWeekRow(currentWeek);
   initialScrollToCurrentWeek();
   initStickyHeader();

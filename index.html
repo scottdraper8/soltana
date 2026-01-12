@@ -28,23 +28,18 @@
 
     <main class="app-shell">
       <section class="table-wrap">
-        <div class="table-head">
-          <div class="table-head-content">
-            <h2>Weekly Timeline</h2>
-            <p class="muted">
-              Track your daily scripture study. Toggle between lesson order and chronological order.
-            </p>
-          </div>
-          <div id="view-toggle-container"></div>
-        </div>
-
         <div class="scroll">
           <table class="timeline" aria-label="Old Testament study timeline table">
             <thead>
               <tr>
                 <th>Week</th>
                 <th>Come, Follow Me (OT 2026)</th>
-                <th>Daily Reading</th>
+                <th>
+                  <div class="reading-header">
+                    <div id="sort-toggle-container"></div>
+                    <span>Daily Reading</span>
+                  </div>
+                </th>
               </tr>
             </thead>
             <tbody>
