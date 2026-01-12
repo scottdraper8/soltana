@@ -1,10 +1,21 @@
 import { setViewMode, getViewMode } from './renderer';
 
+let fabHideTimeout: ReturnType<typeof setTimeout> | null = null;
+let tooltipHideTimeout: ReturnType<typeof setTimeout> | null = null;
+
+export const TOOLTIP_TEXT = {
+  lesson: 'Switch to Chronological Order',
+  chronological: 'Switch to Book Order',
+} as const;
+
+export function getTooltipText(): string {
+  return TOOLTIP_TEXT[getViewMode()];
+}
+
 function renderSortToggle(): string {
   const currentMode = getViewMode();
   const isLesson = currentMode === 'lesson';
 
-  // Sort icon that rotates based on mode
   const sortIcon = `
     <svg class="sort-icon ${isLesson ? 'sort-lesson' : 'sort-chrono'}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
       <path d="M11 5h10"/>
@@ -15,8 +26,6 @@ function renderSortToggle(): string {
     </svg>
   `;
 
-  const tooltipText = isLesson ? 'Switch to Chronological Order' : 'Switch to Lesson Order';
-
   return `
     <button
       type="button"
@@ -25,7 +34,7 @@ function renderSortToggle(): string {
       aria-label="Toggle reading order"
     >
       ${sortIcon}
-      <span class="sort-tooltip">${tooltipText}</span>
+      <span class="sort-tooltip">${getTooltipText()}</span>
     </button>
   `;
 }
@@ -35,6 +44,71 @@ function handleSortToggleClick(event: Event): void {
   const currentMode = button.dataset.currentMode;
   const newMode = currentMode === 'lesson' ? 'chronological' : 'lesson';
   setViewMode(newMode);
+}
+
+function showFab(): void {
+  const fab = document.getElementById('sort-fab');
+  if (!fab) return;
+
+  fab.classList.add('visible');
+
+  if (fabHideTimeout) clearTimeout(fabHideTimeout);
+  fabHideTimeout = setTimeout(() => {
+    fab.classList.remove('visible');
+  }, 5000);
+}
+
+function showTooltip(): void {
+  const fab = document.getElementById('sort-fab');
+  const tooltip = fab?.querySelector('.sort-fab-tooltip');
+  if (!tooltip) return;
+
+  tooltip.classList.add('show');
+
+  if (tooltipHideTimeout) clearTimeout(tooltipHideTimeout);
+  tooltipHideTimeout = setTimeout(() => {
+    tooltip.classList.remove('show');
+  }, 2000);
+}
+
+export function updateMobileSortFab(): void {
+  const fab = document.getElementById('sort-fab');
+  if (!fab) return;
+
+  const isLesson = getViewMode() === 'lesson';
+
+  const icon = fab.querySelector('.sort-fab-icon');
+  if (icon) {
+    icon.classList.toggle('sort-lesson', isLesson);
+    icon.classList.toggle('sort-chrono', !isLesson);
+  }
+
+  const tooltip = fab.querySelector('.sort-fab-tooltip');
+  if (tooltip) {
+    tooltip.textContent = getTooltipText();
+  }
+}
+
+function initMobileSortFab(): void {
+  const fab = document.getElementById('sort-fab');
+  if (!fab) return;
+
+  updateMobileSortFab();
+
+  showFab();
+
+  fab.addEventListener('click', () => {
+    const newMode = getViewMode() === 'lesson' ? 'chronological' : 'lesson';
+    setViewMode(newMode);
+    showTooltip();
+    showFab();
+  });
+
+  // Touch zone to reveal hidden FAB
+  const touchZone = document.createElement('div');
+  touchZone.className = 'sort-fab-touch-zone';
+  document.body.appendChild(touchZone);
+  touchZone.addEventListener('click', showFab);
 }
 
 export function initViewToggle(containerId = 'sort-toggle-container'): void {
@@ -49,4 +123,6 @@ export function initViewToggle(containerId = 'sort-toggle-container'): void {
   if (button) {
     button.addEventListener('click', handleSortToggleClick);
   }
+
+  initMobileSortFab();
 }

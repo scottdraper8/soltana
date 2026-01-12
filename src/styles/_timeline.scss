@@ -9,24 +9,6 @@
   @include neo-raised;
 }
 
-.table-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 16px;
-  padding: 2px 4px 10px;
-
-  p {
-    margin: 6px 0 0;
-  }
-}
-
-.table-head-content {
-  flex: 1 1 auto;
-  min-width: 200px;
-}
-
 .scroll {
   overflow: auto;
   border-radius: $radius-lg;
@@ -228,63 +210,6 @@ table.timeline tbody tr:first-child {
   @include reading-text;
 }
 
-// View toggle component
-.view-toggle {
-  display: flex;
-  gap: 8px;
-  flex-shrink: 0;
-}
-
-.view-toggle-btn {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 10px 16px;
-  border-radius: $radius-sm;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $ink-2;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-  transition: all 0.2s ease;
-
-  @include neo-button-raised;
-
-  &:hover:not(.view-toggle-btn--active) {
-    color: $ink-1;
-    box-shadow:
-      8px 8px 20px $shadow-lo,
-      -5px -5px 14px $shadow-hi,
-      inset 0 1px 0 rgb(255 255 255 / 10%);
-  }
-
-  &--active {
-    @include neo-button-pressed;
-    color: $green;
-
-    .view-toggle-icon {
-      stroke: $green;
-    }
-  }
-}
-
-.view-toggle-icon {
-  width: 18px;
-  height: 18px;
-  stroke: currentcolor;
-  flex-shrink: 0;
-}
-
-.view-toggle-label {
-  @media (width <= 900px) {
-    display: none;
-  }
-}
-
 // Sort toggle button in header
 .reading-header {
   display: flex;
@@ -406,6 +331,11 @@ table.timeline tbody tr:first-child {
   outline: none;
   -webkit-tap-highlight-color: transparent;
 
+  transition:
+    box-shadow $transition-fast,
+    background-color $transition-medium,
+    border-color $transition-medium;
+
   @include neo-button-raised;
 
   &:hover:not([disabled]) {
@@ -413,6 +343,12 @@ table.timeline tbody tr:first-child {
       8px 8px 20px $shadow-lo,
       -5px -5px 14px $shadow-hi,
       inset 0 1px 0 rgb(255 255 255 / 10%);
+  }
+
+  &:active:not([disabled], .day-button--read) {
+    box-shadow:
+      inset 4px 4px 10px rgb(0 0 0 / 50%),
+      inset -2px -2px 6px rgb(255 255 255 / 3%);
   }
 
   &--read {
@@ -426,6 +362,12 @@ table.timeline tbody tr:first-child {
       box-shadow:
         inset 8px 8px 16px rgb(0 0 0 / 60%),
         inset -4px -4px 10px rgb(255 255 255 / 3%);
+    }
+
+    &:active:not([disabled]) {
+      box-shadow:
+        inset 10px 10px 20px rgb(0 0 0 / 70%),
+        inset -5px -5px 12px rgb(255 255 255 / 4%);
     }
   }
 
@@ -446,6 +388,7 @@ table.timeline tbody tr:first-child {
   color: $cyan;
   letter-spacing: 0.04em;
   min-width: 6ch;
+  transition: color $transition-medium;
 }
 
 .day-reading {
@@ -559,7 +502,7 @@ table.timeline tbody tr:first-child {
   .col-week {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid $stroke;
     padding-bottom: 4px;
@@ -585,31 +528,18 @@ table.timeline tbody tr:first-child {
     }
   }
 
-  .col-readings {
-    .day-buttons {
-      gap: 6px;
-    }
-  }
-
-  .view-toggle {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .view-toggle-btn {
-    flex: 1;
-    justify-content: center;
-    padding: 12px 10px;
-  }
-
   .day-button {
-    // On mobile, remove enhanced hover shadows - keep base neo-button state
-    &:hover:not([disabled]) {
-      box-shadow: inherit;
+    &:hover:not([disabled], .day-button--read) {
+      box-shadow:
+        2px 2px 6px rgb(0 0 0 / 50%),
+        -1px -1px 4px rgb(255 255 255 / 3%),
+        inset 0 1px 0 rgb(255 255 255 / 4%);
     }
 
     &--read:hover:not([disabled]) {
-      box-shadow: inherit;
+      box-shadow:
+        inset 6px 6px 12px rgb(0 0 0 / 55%),
+        inset -3px -3px 8px rgb(255 255 255 / 3%);
     }
   }
 

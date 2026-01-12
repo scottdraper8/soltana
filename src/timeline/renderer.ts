@@ -2,6 +2,7 @@ import type { Week, ViewMode } from '../types/timeline';
 import { formatWeekNumber } from '../utils/dates';
 import { createDayId, loadReadDays, toggleDayRead } from '../utils/storage';
 import { formatChapters, distributeAcrossDays } from '../utils/chapterFormatter';
+import { updateMobileSortFab, getTooltipText } from './viewToggle';
 import chronologicalOrderData from '../data/chronologicalOrder.json';
 
 let readDays = new Set<string>();
@@ -135,8 +136,10 @@ function updateSortToggleState(): void {
 
   const tooltip = button.querySelector('.sort-tooltip');
   if (tooltip) {
-    tooltip.innerHTML = isLesson ? 'Switch to Chronological Order' : 'Switch to Book Order';
+    tooltip.innerHTML = getTooltipText();
   }
+
+  updateMobileSortFab();
 }
 
 export function renderTimeline(weeks: Week[], currentWeek: number): void {

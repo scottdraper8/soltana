@@ -1,14 +1,20 @@
 import { getWeekRow } from './renderer';
 
-let currentWeekRow: HTMLTableRowElement | null = null;
+let currentWeekNumber: number | null = null;
 
 export function setCurrentWeekRow(weekNumber: number): void {
-  currentWeekRow = getWeekRow(weekNumber);
+  currentWeekNumber = weekNumber;
+}
+
+function getCurrentWeekRow(): HTMLTableRowElement | null {
+  if (currentWeekNumber === null) return null;
+  return getWeekRow(currentWeekNumber);
 }
 
 function scrollToCurrentWeek(): void {
-  if (currentWeekRow) {
-    currentWeekRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  const row = getCurrentWeekRow();
+  if (row) {
+    row.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 }
 
@@ -31,6 +37,7 @@ export function initScrollNavButton(): void {
 }
 
 function updateScrollNavVisibility(scrollNav: HTMLElement, scrollArrow: HTMLElement): void {
+  const currentWeekRow = getCurrentWeekRow();
   if (!currentWeekRow) {
     scrollNav.classList.remove('visible');
     return;
@@ -49,7 +56,7 @@ function updateScrollNavVisibility(scrollNav: HTMLElement, scrollArrow: HTMLElem
 }
 
 export function initialScrollToCurrentWeek(): void {
-  if (currentWeekRow) {
+  if (currentWeekNumber !== null) {
     setTimeout(scrollToCurrentWeek, 300);
   }
 }

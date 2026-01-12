@@ -78,6 +78,18 @@
   &:active {
     transform: translateY(2px);
   }
+
+  @media (width <= 768px) {
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: center;
+
+    .scroll-label {
+      display: none;
+    }
+  }
 }
 
 .scroll-arrow {
@@ -93,4 +105,117 @@
   color: $ink-1;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+
+// Mobile floating sort button
+.sort-fab {
+  display: none;
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: 50%;
+  background: linear-gradient(145deg, $bg-2, $bg-3);
+  box-shadow:
+    8px 8px 20px rgb(0 0 0 / 55%),
+    -4px -4px 12px rgb(255 255 255 / 5%),
+    inset 0 1px 0 rgb(255 255 255 / 8%);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all $transition-fast;
+
+  @media (width <= 768px) {
+    display: flex;
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:active {
+    box-shadow:
+      inset 4px 4px 10px rgb(0 0 0 / 50%),
+      inset -2px -2px 6px rgb(255 255 255 / 3%);
+  }
+}
+
+.sort-fab-icon {
+  width: 24px;
+  height: 24px;
+  transition: all $transition-fast;
+
+  &.sort-lesson {
+    stroke: $cyan;
+    transform: rotate(0deg);
+  }
+
+  &.sort-chrono {
+    stroke: $purple;
+    transform: rotate(180deg);
+  }
+}
+
+.sort-fab-tooltip {
+  position: absolute;
+  left: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8px 14px;
+  border-radius: $radius-sm;
+  background: linear-gradient(145deg, $bg-2, $bg-3);
+  border: 1px solid rgb(255 255 255 / 8%);
+  color: $ink-1;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all $transition-fast;
+  z-index: 1001;
+
+  box-shadow:
+    4px 4px 12px rgb(0 0 0 / 50%),
+    -2px -2px 8px rgb(255 255 255 / 4%);
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-right-color: $bg-2;
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// Invisible touch zone to reveal hidden FAB
+.sort-fab-touch-zone {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 199;
+
+  @media (width <= 768px) {
+    display: block;
+  }
 }
