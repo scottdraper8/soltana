@@ -140,5 +140,5 @@ export function getWeeksDataPath(): string {
  * Get the path to the images directory.
  */
 export function getImagesDir(): string {
-  return path.join(getProjectRoot(), 'src/assets/images');
+  return path.join(getProjectRoot(), 'public/assets/images');
 }

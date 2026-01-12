@@ -82,7 +82,7 @@ function renderWeekRow(week: Week, isCurrentWeek: boolean): string {
     : '';
 
   const weekBg = week.cfm.image
-    ? `<span class="week-bg" style="background-image: url('/src/${week.cfm.image}')" aria-hidden="true"></span>`
+    ? `<span class="week-bg" style="background-image: url('${week.cfm.image}')" aria-hidden="true"></span>`
     : '';
 
   const daily = getDailyReadings(week, currentViewMode);

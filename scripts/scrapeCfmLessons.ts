@@ -25,7 +25,6 @@ import {
   navigateToLesson,
   closeBrowser,
   getWeeksDataPath,
-  getImagesDir,
 } from './lib/navigation.js';
 import { collectImage } from './lib/imageCollector.js';
 import { collectExcerpt, fixExistingExcerpt } from './lib/excerptCollector.js';
@@ -182,13 +181,6 @@ async function fixExistingExcerpts(weeks: Week[], options: CliOptions): Promise<
 }
 
 async function scrapeWeeks(weeks: Week[], options: CliOptions): Promise<void> {
-  const imagesDir = getImagesDir();
-
-  // Ensure images directory exists
-  if (!fs.existsSync(imagesDir)) {
-    fs.mkdirSync(imagesDir, { recursive: true });
-  }
-
   console.log('\n=== Starting CFM Lesson Scraper ===\n');
   console.log(
     `Collecting: ${options.collectImages ? 'images' : ''} ${options.collectExcerpts ? 'excerpts' : ''}`
@@ -205,63 +197,85 @@ async function scrapeWeeks(weeks: Week[], options: CliOptions): Promise<void> {
   let successCount = 0;
   let errorCount = 0;
 
-  for (const week of weeks) {
-    if (options.specificWeek && week.week !== options.specificWeek) {
-      continue;
-    }
+  // Filter weeks to process
+  const weeksToProcess = weeks.filter(
+    (week) => !options.specificWeek || week.week === options.specificWeek
+  );
 
-    console.log(`\nWeek ${week.week}: ${week.cfm.title}`);
-
-    if (options.dryRun) {
+  if (options.dryRun) {
+    for (const week of weeksToProcess) {
+      console.log(`\nWeek ${week.week}: ${week.cfm.title}`);
       console.log(`  URL: ${week.cfm.link}`);
       console.log('  [DRY RUN] Would process this week');
-      continue;
     }
+    return;
+  }
 
-    const page = await createPage();
+  // Process weeks concurrently in batches
+  const BATCH_SIZE = 5; // Process 5 weeks at a time
+  const batches: Week[][] = [];
 
-    try {
-      await navigateToLesson(page, week.cfm.link);
+  for (let i = 0; i < weeksToProcess.length; i += BATCH_SIZE) {
+    batches.push(weeksToProcess.slice(i, i + BATCH_SIZE));
+  }
 
-      // Collect image
-      if (options.collectImages) {
-        console.log('  Collecting image...');
-        const imageResult = await collectImage(page, imagesDir, week.week);
+  for (const batch of batches) {
+    const promises = batch.map(async (week) => {
+      const page = await createPage();
 
-        if (imageResult.success && imageResult.imagePath) {
-          week.cfm.image = imageResult.imagePath;
-          console.log(`    ✓ Image saved: ${imageResult.imagePath}`);
-        } else {
-          console.log(`    ✗ Image failed: ${imageResult.error}`);
-          errorCount++;
+      try {
+        console.log(`\nWeek ${week.week}: ${week.cfm.title}`);
+        await navigateToLesson(page, week.cfm.link);
+
+        // Collect image
+        if (options.collectImages) {
+          console.log(`  [Week ${week.week}] Collecting image...`);
+          const imageResult = await collectImage(page);
+
+          if (imageResult.success && imageResult.imageUrl) {
+            week.cfm.image = imageResult.imageUrl;
+            console.log(`    ✓ [Week ${week.week}] Image URL collected`);
+          } else {
+            console.log(`    ✗ [Week ${week.week}] Image failed: ${imageResult.error}`);
+            return { success: false };
+          }
         }
-      }
 
-      // Collect excerpt
-      if (options.collectExcerpts) {
-        console.log('  Collecting excerpt...');
-        const excerptResult = await collectExcerpt(page);
+        // Collect excerpt
+        if (options.collectExcerpts) {
+          console.log(`  [Week ${week.week}] Collecting excerpt...`);
+          const excerptResult = await collectExcerpt(page);
 
-        if (excerptResult.success && excerptResult.excerpt) {
-          week.cfm.excerpt = excerptResult.excerpt;
-          console.log(`    ✓ Excerpt collected (${excerptResult.excerpt.length} chars)`);
-        } else {
-          console.log(`    ✗ Excerpt failed: ${excerptResult.error}`);
-          errorCount++;
+          if (excerptResult.success && excerptResult.excerpt) {
+            week.cfm.excerpt = excerptResult.excerpt;
+            console.log(
+              `    ✓ [Week ${week.week}] Excerpt collected (${excerptResult.excerpt.length} chars)`
+            );
+          } else {
+            console.log(`    ✗ [Week ${week.week}] Excerpt failed: ${excerptResult.error}`);
+            return { success: false };
+          }
         }
-      }
 
-      successCount++;
-    } catch (error) {
-      const message = error instanceof Error ? error.message : String(error);
-      console.log(`  ✗ Error: ${message}`);
-      errorCount++;
-    } finally {
-      await page.close();
+        return { success: true };
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        console.log(`  ✗ [Week ${week.week}] Error: ${message}`);
+        return { success: false };
+      } finally {
+        await page.close();
+      }
+    });
+
+    // Wait for batch to complete
+    const results = await Promise.all(promises);
+    successCount += results.filter((r) => r.success).length;
+    errorCount += results.filter((r) => !r.success).length;
+
+    // Small delay between batches to be polite
+    if (batches.indexOf(batch) < batches.length - 1) {
+      await new Promise((resolve) => setTimeout(resolve, 500));
     }
-
-    // Small delay between requests to be polite
-    await new Promise((resolve) => setTimeout(resolve, 1000));
   }
 
   await closeBrowser();
