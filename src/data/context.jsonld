@@ -6,12 +6,14 @@
     "Chapter": "scripture:Chapter",
     "ReadingPlan": "scripture:ReadingPlan",
     "WeeklyReading": "scripture:WeeklyReading",
-    "DailyReading": "scripture:DailyReading",
     "chapterCount": "scripture:chapterCount",
     "weekNumber": "scripture:weekNumber",
-    "cfmDaily": "scripture:cfmDaily",
-    "chronological": "scripture:chronological",
+    "chapters": "scripture:chapters",
     "reading": "scripture:reading",
-    "dateRange": "scripture:dateRange"
+    "dateRange": "scripture:dateRange",
+    "itemListElement": {
+      "@id": "schema:itemListElement",
+      "@container": "@list"
+    }
   }
 }

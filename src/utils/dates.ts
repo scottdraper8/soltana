@@ -1,48 +1,25 @@
 import type { Week } from '../types/timeline';
 
-/**
- * Parses an ISO date string to a Date object at midnight local time.
- */
 function parseDate(dateStr: string): Date {
-  const date = new Date(dateStr + 'T00:00:00');
-  return date;
+  return new Date(dateStr + 'T00:00:00');
 }
 
-/**
- * Determines if a given date falls within a week's date range.
- */
-function isDateInWeek(date: Date, week: Week): boolean {
-  const start = parseDate(week.startDate);
-  const end = new Date(week.endDate + 'T23:59:59');
-  return date >= start && date <= end;
-}
-
-/**
- * Finds the current week number based on today's date.
- * Returns 1 if before the timeline starts, 52 if after it ends.
- */
 export function getCurrentWeekNumber(weeks: Week[]): number {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
   for (const week of weeks) {
-    if (isDateInWeek(today, week)) {
+    const start = parseDate(week.startDate);
+    const end = new Date(week.endDate + 'T23:59:59');
+    if (today >= start && today <= end) {
       return week.week;
     }
   }
 
   const firstStart = parseDate(weeks[0].startDate);
-  if (today < firstStart) {
-    return 1;
-  }
-
-  return 52;
+  return today < firstStart ? 1 : 52;
 }
 
-/**
- * Formats a week number for display.
- */
 export function formatWeekNumber(week: number): string {
-  const padded = week.toString().padStart(2, '0');
-  return `Week ${padded}`;
+  return `Week ${week.toString().padStart(2, '0')}`;
 }

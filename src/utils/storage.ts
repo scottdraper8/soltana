@@ -1,14 +1,10 @@
 const STORAGE_KEY = 'ot-timeline-read-days';
 
-/**
- * Loads the set of read day IDs from localStorage.
- */
 export function loadReadDays(): Set<string> {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) {
-      const parsed = JSON.parse(stored) as string[];
-      return new Set(parsed);
+      return new Set(JSON.parse(stored) as string[]);
     }
   } catch {
     console.warn('Failed to load read days from localStorage');
@@ -16,10 +12,7 @@ export function loadReadDays(): Set<string> {
   return new Set();
 }
 
-/**
- * Saves the set of read day IDs to localStorage.
- */
-export function saveReadDays(readDays: Set<string>): void {
+function saveReadDays(readDays: Set<string>): void {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify([...readDays]));
   } catch {
@@ -27,29 +20,18 @@ export function saveReadDays(readDays: Set<string>): void {
   }
 }
 
-/**
- * Toggles the read state of a specific day and persists to localStorage.
- * Returns the new read state (true if now read, false if now unread).
- */
 export function toggleDayRead(dayId: string, readDays: Set<string>): boolean {
-  if (readDays.has(dayId)) {
+  const wasRead = readDays.has(dayId);
+  if (wasRead) {
     readDays.delete(dayId);
-    saveReadDays(readDays);
-    return false;
+  } else {
+    readDays.add(dayId);
   }
-  readDays.add(dayId);
   saveReadDays(readDays);
-  return true;
+  return !wasRead;
 }
 
-/**
- * Creates a day ID from week number, day index, and optional prefix.
- * Format: "{prefix}-w{week}-d{day}" (e.g., "cfm-w02-d3" for CFM week 2, day 3)
- * @param weekNumber - Week number (1-52)
- * @param dayIndex - Day index (0-6)
- * @param prefix - Prefix to distinguish reading type ('cfm' or 'chrono'), defaults to 'cfm'
- */
-export function createDayId(weekNumber: number, dayIndex: number, prefix = 'cfm'): string {
+export function createDayId(weekNumber: number, dayIndex: number, prefix: string): string {
   const weekPadded = weekNumber.toString().padStart(2, '0');
   return `${prefix}-w${weekPadded}-d${String(dayIndex + 1)}`;
 }

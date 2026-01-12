@@ -66,8 +66,6 @@ table.timeline {
       backdrop-filter: blur(8px);
       background: $bg-2;
 
-      // Each th gets a pseudo-element that extends down
-      // They all stack on top of each other to create a continuous bridge
       &::after {
         content: '';
         position: absolute;
@@ -95,10 +93,8 @@ table.timeline {
       border-radius: 14px;
       transition: background 0.3s ease;
       box-shadow:
-        // Deeper inset shadows for pronounced divot
         inset 0 4px 12px rgb(0 0 0 / 45%),
         inset 0 -3px 8px rgb(255 255 255 / 4%),
-        // Outer shadow to create raised border effect
         0 2px 0 rgb(255 255 255 / 3%),
         0 -2px 0 rgb(0 0 0 / 15%);
 
@@ -135,7 +131,6 @@ table.timeline {
         z-index: 0;
       }
 
-      // Background image week rows - positioned behind all content
       .week-bg {
         position: absolute;
         inset: 0;
@@ -174,7 +169,6 @@ table.timeline {
           color: $ink-1;
         }
 
-        // Don't show overlay on current week
         .row-overlay {
           display: none;
         }
@@ -183,7 +177,6 @@ table.timeline {
   }
 }
 
-// First row connects to header (no top rounded corners)
 table.timeline tbody tr:first-child {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -230,14 +223,7 @@ table.timeline tbody tr:first-child {
   }
 }
 
-.col-cfm-daily {
-  width: 320px;
-  font-size: 19px;
-  line-height: 1.6;
-  letter-spacing: 0.02em;
-}
-
-.col-chrono {
+.col-readings {
   width: 320px;
   font-size: 19px;
   line-height: 1.6;
@@ -332,7 +318,6 @@ table.timeline tbody tr:first-child {
       inset 0 1px 0 rgb(255 255 255 / 10%);
   }
 
-  // Read state - pressed/inset neumorphic effect
   &--read {
     @include neo-button-pressed;
 
@@ -347,7 +332,6 @@ table.timeline tbody tr:first-child {
     }
   }
 
-  // Empty/disabled state
   &--empty {
     opacity: 0.4;
     cursor: not-allowed;
@@ -412,7 +396,6 @@ table.timeline tbody tr:first-child {
   line-height: 1.5;
   position: relative;
 
-  // Hide on mobile
   @media (width <= 768px) {
     display: none;
   }
@@ -428,7 +411,6 @@ table.timeline tbody tr:first-child {
   line-break: auto;
   overflow-wrap: break-word;
 
-  // Reduce lines on narrower screens to prevent row height expansion
   @media (width <= 1024px) {
     -webkit-line-clamp: 7;
     line-clamp: 7;
@@ -462,50 +444,66 @@ table.timeline tbody tr:first-child {
     min-width: 100%;
   }
 
-  // Make table scrollable but optimize for mobile
   .scroll {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 
-  // Stack week rows for better mobile experience
   tbody tr {
     display: flex;
     flex-direction: column;
-    padding: 16px;
-    margin-bottom: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
     border-radius: $radius-md;
+
+    &:first-child {
+      border-top-left-radius: $radius-md;
+      border-top-right-radius: $radius-md;
+    }
   }
 
   tbody td {
     display: block;
     width: 100% !important;
     border-bottom: none;
-    padding: 8px 0;
+    padding: 2px 0;
   }
 
   .col-week {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
     border-bottom: 1px solid $stroke;
-    padding-bottom: 12px;
-    margin-bottom: 12px;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+
+    .weeknum {
+      padding-left: 0;
+    }
+
+    .dates {
+      margin-top: 0;
+      padding-left: 0;
+    }
   }
 
   .col-cfm {
-    margin-bottom: 16px;
+    margin-bottom: 4px;
+    padding: 2px 0;
 
     a {
-      font-size: 20px;
+      font-size: 18px;
+      margin-bottom: 2px;
     }
   }
 
-  .col-cfm-daily,
-  .col-chrono {
+  .col-readings {
     .day-buttons {
-      gap: 8px;
+      gap: 6px;
     }
   }
 
-  // Stack view toggle on mobile
   .view-toggle {
     width: 100%;
     justify-content: center;
@@ -517,10 +515,8 @@ table.timeline tbody tr:first-child {
     padding: 12px 10px;
   }
 
-  // Remove hover effects on mobile/touch devices
   .day-button {
     &:hover:not([disabled]) {
-      // Reset to base raised state on hover (no hover effect)
       box-shadow:
         3px 3px 8px rgb(0 0 0 / 40%),
         -2px -2px 6px rgb(255 255 255 / 4%),
@@ -528,14 +524,12 @@ table.timeline tbody tr:first-child {
     }
 
     &--read:hover:not([disabled]) {
-      // Reset to base pressed state on hover (no hover effect)
       box-shadow:
         inset 4px 4px 10px rgb(0 0 0 / 45%),
         inset -2px -2px 6px rgb(255 255 255 / 4%);
     }
   }
 
-  // Hide table header on mobile
   thead {
     display: none;
   }
