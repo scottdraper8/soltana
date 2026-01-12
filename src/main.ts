@@ -6,7 +6,8 @@ import {
   initialScrollToCurrentWeek,
   setCurrentWeekRow,
 } from './timeline/navigation';
-import { renderTimeline } from './timeline/renderer';
+import { renderTimeline, loadViewMode } from './timeline/renderer';
+import { initViewToggle } from './timeline/viewToggle';
 import { getCurrentWeekNumber } from './utils/dates';
 
 /**
@@ -14,6 +15,12 @@ import { getCurrentWeekNumber } from './utils/dates';
  */
 function init(): void {
   const currentWeek = getCurrentWeekNumber(weeks);
+
+  // Load saved view mode preference before rendering
+  loadViewMode();
+
+  // Initialize view toggle component
+  initViewToggle();
 
   renderTimeline(weeks, currentWeek);
   setCurrentWeekRow(currentWeek);

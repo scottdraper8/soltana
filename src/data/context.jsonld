@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "scripture": "https://ot-timeline.example/vocab#",
+    "Book": "scripture:Book",
+    "Chapter": "scripture:Chapter",
+    "ReadingPlan": "scripture:ReadingPlan",
+    "WeeklyReading": "scripture:WeeklyReading",
+    "DailyReading": "scripture:DailyReading",
+    "chapterCount": "scripture:chapterCount",
+    "weekNumber": "scripture:weekNumber",
+    "cfmDaily": "scripture:cfmDaily",
+    "chronological": "scripture:chronological",
+    "reading": "scripture:reading",
+    "dateRange": "scripture:dateRange"
+  }
+}

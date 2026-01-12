@@ -11,7 +11,8 @@
       "excerpt": "When you consider studying the Old Testament this year, how do you feel? Eager? Uncertain? Afraid? All of these emotions are understandable. The Old Testament is one of the oldest collections of writings in the world, and this can make it both exciting and intimidating. These writings come from an ancient culture that can seem foreign and sometimes strange or even uncomfortable. And yet in these writings we see people having experiences that seem familiar. We recognize gospel themes that witness of the divinity of Jesus Christ and His gospel. Yes, people like Abraham, Sarah, Hannah, and Daniel lived lives that, in some ways, were very different from ours. But they also experienced family joy and family discord, moments of faith and moments of uncertainty, and successes and failures—like all of us do. More important, they exercised faith, repented, made covenants, had spiritual experiences, and never gave up on the promise of a Savior. As we learn how God moved in their lives, we also see Him in ours, and we say with the psalmist: “Thy word is a lamp unto my feet, and a light unto my path. … Therefore thy servant loveth it” (Psalm 119:105, 140).",
       "image": "assets/images/the_teachings_of_jesus_christ.jpg"
     },
-    "chronological": ["Epistle Dedicatory", "Bible Chronology", "", "", "", "", ""]
+    "chronological": ["Epistle Dedicatory", "Bible Chronology", "", "", "", "", ""],
+    "cfmDaily": ["Introduction to the Old Testament", "", "", "", "", "", ""]
   },
   {
     "week": 2,
@@ -25,7 +26,8 @@
       "excerpt": "The Bible begins with the words “in the beginning God created the heaven and the earth” (Genesis 1:1). But what was therebeforethis “beginning”? Andwhydid God create all of this? Through the Prophet Joseph Smith, the Lord has shed light on these questions. For example, He gave us the record of a vision in which Abraham saw our existence as spirits “before the world was” (see Abraham 3:22–28). The Lord also gave us an inspired translation or revision of the first six chapters of Genesis, called the book of Moses—which doesn’t begin with “in the beginning.” Instead, it begins with an experience Moses had that provides some context for the Creation story. Together, these latter-day scriptures are a good place to start our study of the Old Testament because they address some fundamental questions that can frame our reading: Who is God? Who are we? What is God’s work, and what is our place in it? The opening chapters of Genesis could be seen as the Lord’s response to Moses’s request: “Be merciful unto thy servant, O God, and tell me concerning this earth, and the inhabitants thereof, and also the heavens” (Moses 1:36).",
       "image": "assets/images/our_true_identity.jpg"
     },
-    "chronological": ["Moses 1", "Abraham 3", "", "", "", "", ""]
+    "chronological": ["Moses 1", "Abraham 3", "", "", "", "", ""],
+    "cfmDaily": ["Moses 1", "Abraham 3", "", "", "", "", ""]
   },
   {
     "week": 3,
@@ -47,7 +49,8 @@
       "Genesis 11; Job 1-2",
       "Job 3-5",
       "Job 6-7"
-    ]
+    ],
+    "cfmDaily": ["Genesis 1", "Genesis 2", "Moses 2", "Moses 3", "Abraham 4", "Abraham 5", ""]
   },
   {
     "week": 4,
@@ -69,7 +72,8 @@
       "Job 19-20",
       "Job 21-23",
       "Job 24-25"
-    ]
+    ],
+    "cfmDaily": ["Genesis 3", "Genesis 4", "Moses 4", "Moses 5", "", "", ""]
   },
   {
     "week": 5,
@@ -91,7 +95,8 @@
       "Job 37-38",
       "Job 39-41",
       "Job 42; Genesis 12"
-    ]
+    ],
+    "cfmDaily": ["Genesis 5", "Moses 6", "", "", "", "", ""]
   },
   {
     "week": 6,
@@ -113,7 +118,8 @@
       "Genesis 24-25",
       "Genesis 26-28",
       "Genesis 29-31"
-    ]
+    ],
+    "cfmDaily": ["Moses 7", "", "", "", "", "", ""]
   },
   {
     "week": 7,
@@ -135,6 +141,15 @@
       "Genesis 42-44",
       "Genesis 45-46",
       "Genesis 47-49"
+    ],
+    "cfmDaily": [
+      "Genesis 6",
+      "Genesis 7",
+      "Genesis 8",
+      "Genesis 9",
+      "Genesis 10",
+      "Genesis 11",
+      "Moses 8"
     ]
   },
   {
@@ -157,7 +172,8 @@
       "Exodus 10-12",
       "Exodus 13-14",
       "Exodus 15-17"
-    ]
+    ],
+    "cfmDaily": ["Genesis 12-13", "Genesis 14-15", "Genesis 16-17", "Abraham 1-2", "", "", ""]
   },
   {
     "week": 9,
@@ -179,6 +195,15 @@
       "Exodus 28-30",
       "Exodus 31-33",
       "Exodus 34-35"
+    ],
+    "cfmDaily": [
+      "Genesis 18",
+      "Genesis 19",
+      "Genesis 20",
+      "Genesis 21",
+      "Genesis 22",
+      "Genesis 23",
+      ""
     ]
   },
   {
@@ -201,6 +226,15 @@
       "Leviticus 7-8",
       "Leviticus 9-11",
       "Leviticus 12-13"
+    ],
+    "cfmDaily": [
+      "Genesis 24-25",
+      "Genesis 26-27",
+      "Genesis 28-29",
+      "Genesis 30-31",
+      "Genesis 32-33",
+      "",
+      ""
     ]
   },
   {
@@ -223,7 +257,8 @@
       "Leviticus 25-26",
       "Leviticus 27; Numbers 1-2",
       "Numbers 3-4"
-    ]
+    ],
+    "cfmDaily": ["Genesis 37", "Genesis 38", "Genesis 39", "Genesis 40", "Genesis 41", "", ""]
   },
   {
     "week": 12,
@@ -245,6 +280,15 @@
       "Psalm 90; Numbers 16",
       "Numbers 17-19",
       "Numbers 20-22"
+    ],
+    "cfmDaily": [
+      "Genesis 42-43",
+      "Genesis 44-45",
+      "Genesis 46-47",
+      "Genesis 48-49",
+      "Genesis 50",
+      "",
+      ""
     ]
   },
   {
@@ -267,7 +311,8 @@
       "Numbers 33-35",
       "Numbers 36; Deuteronomy 1",
       "Deuteronomy 2-4"
-    ]
+    ],
+    "cfmDaily": ["Exodus 1", "Exodus 2", "Exodus 3", "Exodus 4", "Exodus 5", "Exodus 6", ""]
   },
   {
     "week": 14,
@@ -289,7 +334,8 @@
       "Deuteronomy 15-17",
       "Deuteronomy 18-19",
       "Deuteronomy 20-22"
-    ]
+    ],
+    "cfmDaily": ["Easter", "", "", "", "", "", ""]
   },
   {
     "week": 15,
@@ -311,6 +357,15 @@
       "Deuteronomy 33-34; Psalm 91",
       "Joshua 1-3",
       "Joshua 4-5"
+    ],
+    "cfmDaily": [
+      "Exodus 7",
+      "Exodus 8",
+      "Exodus 9",
+      "Exodus 10",
+      "Exodus 11",
+      "Exodus 12",
+      "Exodus 13"
     ]
   },
   {
@@ -333,7 +388,8 @@
       "Joshua 17-18",
       "Joshua 19-21",
       "Joshua 22-23"
-    ]
+    ],
+    "cfmDaily": ["Exodus 14", "Exodus 15", "Exodus 16", "Exodus 17", "Exodus 18", "", ""]
   },
   {
     "week": 17,
@@ -355,6 +411,15 @@
       "Judges 11-12",
       "Judges 13-15",
       "Judges 16-17"
+    ],
+    "cfmDaily": [
+      "Exodus 19",
+      "Exodus 20",
+      "Exodus 24",
+      "Exodus 31",
+      "Exodus 32",
+      "Exodus 33",
+      "Exodus 34"
     ]
   },
   {
@@ -377,6 +442,15 @@
       "1 Samuel 4-5",
       "1 Samuel 6-8",
       "1 Samuel 9-11"
+    ],
+    "cfmDaily": [
+      "Exodus 35-36",
+      "Exodus 37-38",
+      "Exodus 39-40",
+      "Leviticus 1; Leviticus 4",
+      "Leviticus 16; Leviticus 19",
+      "",
+      ""
     ]
   },
   {
@@ -399,6 +473,15 @@
       "Psalm 59; 1 Samuel 21-22",
       "1 Samuel 23-24",
       "Psalm 7, 27, 31"
+    ],
+    "cfmDaily": [
+      "Numbers 11-12",
+      "Numbers 13-14",
+      "Numbers 20-21",
+      "Numbers 22-23",
+      "Numbers 24; Numbers 27",
+      "",
+      ""
     ]
   },
   {
@@ -421,6 +504,15 @@
       "Psalm 54, 63; 1 Samuel 28",
       "1 Samuel 29-30",
       "1 Samuel 31; Psalm 18; Psalm 121, 123-125, 128"
+    ],
+    "cfmDaily": [
+      "Deuteronomy 6-7",
+      "Deuteronomy 8; Deuteronomy 15",
+      "Deuteronomy 18; Deuteronomy 29",
+      "Deuteronomy 30; Deuteronomy 34",
+      "",
+      "",
+      ""
     ]
   },
   {
@@ -443,7 +535,8 @@
       "Psalm 14, 16, 19",
       "Psalm 21; 1 Chronicles 1-2",
       "Psalm 43-44"
-    ]
+    ],
+    "cfmDaily": ["Joshua 1-2", "Joshua 3-4", "Joshua 5-6", "Joshua 7-8", "Joshua 23-24", "", ""]
   },
   {
     "week": 22,
@@ -465,6 +558,15 @@
       "1 Chronicles 6; Psalm 81, 88, 92-93",
       "1 Chronicles 7-9",
       "1 Chronicles 10; Psalm 102"
+    ],
+    "cfmDaily": [
+      "Judges 2-3",
+      "Judges 4; Judges 6",
+      "Judges 7-8",
+      "Judges 13-14",
+      "Judges 15-16",
+      "",
+      ""
     ]
   },
   {
@@ -487,6 +589,15 @@
       "Psalm 1-2",
       "Psalm 15, 22-23",
       "Psalm 24, 47"
+    ],
+    "cfmDaily": [
+      "Ruth 1-2",
+      "Ruth 3-4",
+      "1 Samuel 1-2",
+      "1 Samuel 3-4",
+      "1 Samuel 5-6",
+      "1 Samuel 7",
+      ""
     ]
   },
   {
@@ -509,6 +620,15 @@
       "Psalm 60, 75",
       "Psalm 76, 83, 95",
       "Psalm 108-110"
+    ],
+    "cfmDaily": [
+      "1 Samuel 8",
+      "1 Samuel 9",
+      "1 Samuel 10",
+      "1 Samuel 13",
+      "1 Samuel 15",
+      "1 Samuel 16",
+      ""
     ]
   },
   {
@@ -531,6 +651,15 @@
       "2 Samuel 13-15",
       "Psalm 3-4",
       "Psalm 12-13, 28"
+    ],
+    "cfmDaily": [
+      "1 Samuel 17-18",
+      "1 Samuel 24-25",
+      "1 Samuel 26; 2 Samuel 5",
+      "2 Samuel 6-7",
+      "",
+      "",
+      ""
     ]
   },
   {
@@ -553,6 +682,15 @@
       "2 Samuel 19-21",
       "Psalm 5, 38, 41-42",
       "2 Samuel 22-23; Psalm 57"
+    ],
+    "cfmDaily": [
+      "2 Samuel 11-12",
+      "1 Kings 3; 1 Kings 6",
+      "1 Kings 7-8",
+      "1 Kings 9; 1 Kings 11",
+      "",
+      "",
+      ""
     ]
   },
   {
@@ -575,7 +713,8 @@
       "1 Chronicles 24-25; Psalm 131, 138-139, 143",
       "Psalm 131, 138-139, 144-145",
       "1 Chronicles 26-28"
-    ]
+    ],
+    "cfmDaily": ["1 Kings 12-13", "1 Kings 17-18", "1 Kings 19-20", "1 Kings 21-22", "", "", ""]
   },
   {
     "week": 28,
@@ -597,7 +736,8 @@
       "1 Kings 1-2; Psalm 37",
       "Psalm 71, 94; Psalm 72, Song of Solomon 1",
       "Psalm 72, Song of Solomon 2-3"
-    ]
+    ],
+    "cfmDaily": ["2 Kings 2", "2 Kings 3", "2 Kings 4", "2 Kings 5", "2 Kings 6", "2 Kings 7", ""]
   },
   {
     "week": 29,
@@ -619,6 +759,15 @@
       "Proverbs 7-8",
       "Proverbs 9-11",
       "Proverbs 12-13"
+    ],
+    "cfmDaily": [
+      "2 Kings 16-17",
+      "2 Kings 18-19",
+      "2 Kings 20-21",
+      "2 Kings 22-23",
+      "2 Kings 24-25",
+      "",
+      ""
     ]
   },
   {
@@ -641,6 +790,15 @@
       "1 Kings 3-4, 2 Chronicles 1; Psalm 72",
       "Proverbs 25-27",
       "Proverbs 28-29; Ecclesiastes 1"
+    ],
+    "cfmDaily": [
+      "2 Chronicles 14-15",
+      "2 Chronicles 16-17",
+      "2 Chronicles 18-19",
+      "2 Chronicles 20; 2 Chronicles 26",
+      "2 Chronicles 30",
+      "",
+      ""
     ]
   },
   {
@@ -663,6 +821,15 @@
       "Ecclesiastes 12; 1 Kings 5-6, 2 Chronicles 2-3",
       "1 Kings 7, 2 Chronicles 4; 1 Kings 8, 2 Chronicles 5",
       "2 Chronicles 6-7; Psalm 136"
+    ],
+    "cfmDaily": [
+      "Ezra 1; Ezra 3",
+      "Ezra 4-5",
+      "Ezra 6-7",
+      "Nehemiah 2; Nehemiah 4",
+      "Nehemiah 5-6",
+      "Nehemiah 8",
+      ""
     ]
   },
   {
@@ -685,7 +852,8 @@
       "Ecclesiastes 2-4",
       "Ecclesiastes 5-6",
       "Ecclesiastes 7-9"
-    ]
+    ],
+    "cfmDaily": ["Esther 1-2", "Esther 3-4", "Esther 5-6", "Esther 7-8", "Esther 9-10", "", ""]
   },
   {
     "week": 33,
@@ -707,6 +875,15 @@
       "1 Kings 15:1-24, 2 Chronicles 14-16",
       "1 Kings 15:25-16:34, 2 Chronicles 17; 1 Kings 17",
       "1 Kings 18-20"
+    ],
+    "cfmDaily": [
+      "Job 1-3",
+      "Job 12-14",
+      "Job 19; Job 21-22",
+      "Job 23-24; Job 38",
+      "Job 39-40; Job 42",
+      "",
+      ""
     ]
   },
   {
@@ -729,6 +906,15 @@
       "2 Kings 1-3",
       "2 Kings 4-6",
       "2 Kings 7-8"
+    ],
+    "cfmDaily": [
+      "Psalms 1-2; Psalms 8",
+      "Psalms 19-21",
+      "Psalms 22-24",
+      "Psalms 25-27",
+      "Psalms 28-30",
+      "Psalms 31-33",
+      "Psalms 40; Psalms 46"
     ]
   },
   {
@@ -751,6 +937,15 @@
       "Isaiah 2-3",
       "Isaiah 4-6",
       "Isaiah 7-8"
+    ],
+    "cfmDaily": [
+      "Psalms 49-51",
+      "Psalms 61-63",
+      "Psalms 64-66",
+      "Psalms 69-71",
+      "Psalms 72; Psalms 77-78",
+      "Psalms 85-86",
+      ""
     ]
   },
   {
@@ -773,6 +968,15 @@
       "Isaiah 10-11",
       "Isaiah 12; Micah 1-2",
       "Micah 3-5"
+    ],
+    "cfmDaily": [
+      "Psalms 102-103; Psalms 110",
+      "Psalms 116-118",
+      "Psalms 119; Psalms 127-128",
+      "Psalms 135-137",
+      "Psalms 138-139; Psalms 146",
+      "Psalms 147-149",
+      "Psalms 150"
     ]
   },
   {
@@ -795,6 +999,15 @@
       "Isaiah 20-22",
       "Isaiah 23-24",
       "Isaiah 25-27"
+    ],
+    "cfmDaily": [
+      "Proverbs 1-2",
+      "Proverbs 3-4",
+      "Proverbs 15-16",
+      "Proverbs 22; Proverbs 31",
+      "Ecclesiastes 1-2",
+      "Ecclesiastes 3; Ecclesiastes 11",
+      "Ecclesiastes 12"
     ]
   },
   {
@@ -817,6 +1030,15 @@
       "Hosea 7-9",
       "Hosea 10-11",
       "Hosea 12-14"
+    ],
+    "cfmDaily": [
+      "Isaiah 1-2",
+      "Isaiah 3-4",
+      "Isaiah 5-6",
+      "Isaiah 7-8",
+      "Isaiah 9-10",
+      "Isaiah 11-12",
+      ""
     ]
   },
   {
@@ -839,6 +1061,15 @@
       "Isaiah 38-39; Psalm 75",
       "Isaiah 40-41",
       "Isaiah 42-44"
+    ],
+    "cfmDaily": [
+      "Isaiah 13-14",
+      "Isaiah 22; Isaiah 24",
+      "Isaiah 25-26",
+      "Isaiah 27-28",
+      "Isaiah 29-30",
+      "Isaiah 35",
+      ""
     ]
   },
   {
@@ -861,6 +1092,15 @@
       "Isaiah 51-53",
       "Isaiah 54-56",
       "Isaiah 57-58"
+    ],
+    "cfmDaily": [
+      "Isaiah 40-41",
+      "Isaiah 42-43",
+      "Isaiah 44-45",
+      "Isaiah 46-47",
+      "Isaiah 48-49",
+      "",
+      ""
     ]
   },
   {
@@ -883,7 +1123,8 @@
       "2 Chronicles 33; Nahum 1",
       "Nahum 2-3; 2 Kings 22-23, 2 Chronicles 34",
       "2 Kings 22-23, 2 Chronicles 35; Zephaniah 1"
-    ]
+    ],
+    "cfmDaily": ["Isaiah 50-51", "Isaiah 52-53", "Isaiah 54-55", "Isaiah 56-57", "", "", ""]
   },
   {
     "week": 42,
@@ -905,6 +1146,15 @@
       "Jeremiah 10-11",
       "Jeremiah 12-14",
       "Jeremiah 15-17"
+    ],
+    "cfmDaily": [
+      "Isaiah 58-59",
+      "Isaiah 60-61",
+      "Isaiah 62-63",
+      "Isaiah 64-65",
+      "Isaiah 66",
+      "",
+      ""
     ]
   },
   {
@@ -927,6 +1177,15 @@
       "Jeremiah 28-30",
       "Jeremiah 31-32",
       "Jeremiah 33-35"
+    ],
+    "cfmDaily": [
+      "Jeremiah 1-2",
+      "Jeremiah 3; Jeremiah 7",
+      "Jeremiah 16-17",
+      "Jeremiah 18; Jeremiah 20",
+      "",
+      "",
+      ""
     ]
   },
   {
@@ -949,6 +1208,15 @@
       "Habakkuk 3; Jeremiah 41-42",
       "Jeremiah 43-44",
       "Jeremiah 45-47"
+    ],
+    "cfmDaily": [
+      "Jeremiah 31-32",
+      "Jeremiah 33; Jeremiah 36",
+      "Jeremiah 37-38",
+      "Jeremiah 39; Lamentations 1",
+      "Lamentations 3",
+      "",
+      ""
     ]
   },
   {
@@ -971,6 +1239,15 @@
       "Ezekiel 2-4",
       "Ezekiel 5-6",
       "Ezekiel 7-9"
+    ],
+    "cfmDaily": [
+      "Ezekiel 1-2",
+      "Ezekiel 3; Ezekiel 33",
+      "Ezekiel 34; Ezekiel 36",
+      "Ezekiel 37; Ezekiel 47",
+      "",
+      "",
+      ""
     ]
   },
   {
@@ -993,7 +1270,8 @@
       "Ezekiel 20-22",
       "Ezekiel 23-25",
       "Ezekiel 26-27"
-    ]
+    ],
+    "cfmDaily": ["Daniel 1", "Daniel 2", "Daniel 3", "Daniel 4", "Daniel 5", "Daniel 6", "Daniel 7"]
   },
   {
     "week": 47,
@@ -1015,6 +1293,15 @@
       "Ezekiel 39-40",
       "Ezekiel 41-43",
       "Ezekiel 44-45"
+    ],
+    "cfmDaily": [
+      "Hosea 1-2",
+      "Hosea 3-4",
+      "Hosea 5-6",
+      "Hosea 10-11",
+      "Hosea 12-13",
+      "Hosea 14; Joel 1",
+      "Joel 2-3"
     ]
   },
   {
@@ -1037,6 +1324,15 @@
       "Daniel 6-7",
       "Daniel 8-10",
       "Daniel 11-12; Ezra 1"
+    ],
+    "cfmDaily": [
+      "Amos 1-2",
+      "Amos 3-4",
+      "Amos 5-6",
+      "Amos 7-8",
+      "Amos 9; Obadiah 1",
+      "Jonah 1-2",
+      "Jonah 3-4"
     ]
   },
   {
@@ -1059,6 +1355,15 @@
       "Zechariah 3-4",
       "Zechariah 5-7",
       "Zechariah 8-10"
+    ],
+    "cfmDaily": [
+      "Micah 1-3",
+      "Micah 4-6",
+      "Micah 7; Nahum 1-2",
+      "Nahum 3; Habakkuk 1-2",
+      "Habakkuk 3; Zephaniah 1-2",
+      "Zephaniah 3",
+      ""
     ]
   },
   {
@@ -1081,6 +1386,15 @@
       "Esther 7-9",
       "Esther 10; Ezra 7",
       "Ezra 8-10"
+    ],
+    "cfmDaily": [
+      "Haggai 1-2",
+      "Zechariah 1-2",
+      "Zechariah 3-4",
+      "Zechariah 7-8",
+      "Zechariah 9-10",
+      "Zechariah 11-12",
+      "Zechariah 13-14"
     ]
   },
   {
@@ -1103,7 +1417,8 @@
       "Nehemiah 11-13",
       "Psalm 126; Malachi 1",
       "Malachi 2-4"
-    ]
+    ],
+    "cfmDaily": ["Malachi 1", "Malachi 2", "Malachi 3", "Malachi 4", "", "", ""]
   },
   {
     "week": 52,
@@ -1125,6 +1440,7 @@
       "Isaiah 61:1-3",
       "Micah 5:2-5",
       "Psalm 2; Psalm 110"
-    ]
+    ],
+    "cfmDaily": ["Christmas", "", "", "", "", "", ""]
   }
 ]

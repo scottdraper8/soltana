@@ -29,6 +29,13 @@ export interface Week {
   dateLabel: string;
   /** Come, Follow Me lesson details */
   cfm: CfmLesson;
-  /** Array of 7 daily readings (empty strings for days without readings) */
+  /** Array of 7 daily CFM readings derived from cfm.reading (empty strings for days without readings) */
+  cfmDaily: string[];
+  /** Array of 7 daily chronological readings (empty strings for days without readings) */
   chronological: string[];
 }
+
+/**
+ * Reading plan view mode for the timeline
+ */
+export type ViewMode = 'cfm' | 'chronological' | 'both';

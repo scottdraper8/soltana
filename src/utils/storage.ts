@@ -43,10 +43,13 @@ export function toggleDayRead(dayId: string, readDays: Set<string>): boolean {
 }
 
 /**
- * Creates a day ID from week number and day index.
- * Format: "w{week}-d{day}" (e.g., "w02-d3" for week 2, day 3)
+ * Creates a day ID from week number, day index, and optional prefix.
+ * Format: "{prefix}-w{week}-d{day}" (e.g., "cfm-w02-d3" for CFM week 2, day 3)
+ * @param weekNumber - Week number (1-52)
+ * @param dayIndex - Day index (0-6)
+ * @param prefix - Prefix to distinguish reading type ('cfm' or 'chrono'), defaults to 'cfm'
  */
-export function createDayId(weekNumber: number, dayIndex: number): string {
+export function createDayId(weekNumber: number, dayIndex: number, prefix = 'cfm'): string {
   const weekPadded = weekNumber.toString().padStart(2, '0');
-  return `w${weekPadded}-d${String(dayIndex + 1)}`;
+  return `${prefix}-w${weekPadded}-d${String(dayIndex + 1)}`;
 }

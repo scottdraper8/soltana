@@ -7,11 +7,21 @@
 }
 
 .table-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
   padding: 2px 4px 10px;
 
   p {
     margin: 6px 0 0;
   }
+}
+
+.table-head-content {
+  flex: 1 1 auto;
+  min-width: 200px;
 }
 
 .scroll {
@@ -220,11 +230,75 @@ table.timeline tbody tr:first-child {
   }
 }
 
-.col-chrono {
-  width: 280px;
+.col-cfm-daily {
+  width: 320px;
   font-size: 19px;
   line-height: 1.6;
   letter-spacing: 0.02em;
+}
+
+.col-chrono {
+  width: 320px;
+  font-size: 19px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+// View toggle component
+.view-toggle {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.view-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $ink-2;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.2s ease;
+
+  @include neo-button-raised;
+
+  &:hover:not(.view-toggle-btn--active) {
+    color: $ink-1;
+    box-shadow:
+      8px 8px 20px $shadow-lo,
+      -5px -5px 14px $shadow-hi,
+      inset 0 1px 0 rgb(255 255 255 / 10%);
+  }
+
+  &--active {
+    @include neo-button-pressed;
+    color: $green;
+
+    .view-toggle-icon {
+      stroke: $green;
+    }
+  }
+}
+
+.view-toggle-icon {
+  width: 18px;
+  height: 18px;
+  stroke: currentcolor;
+  flex-shrink: 0;
+}
+
+.view-toggle-label {
+  @media (width <= 900px) {
+    display: none;
+  }
 }
 
 // Day buttons container
@@ -424,10 +498,23 @@ table.timeline tbody tr:first-child {
     }
   }
 
+  .col-cfm-daily,
   .col-chrono {
     .day-buttons {
       gap: 8px;
     }
+  }
+
+  // Stack view toggle on mobile
+  .view-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .view-toggle-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 12px 10px;
   }
 
   // Remove hover effects on mobile/touch devices
