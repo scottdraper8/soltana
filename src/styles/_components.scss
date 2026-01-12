@@ -1,14 +1,5 @@
 @use 'mixins' as *;
 
-// Cards
-.card {
-  @include glass-card;
-}
-
-.neo {
-  @include neo-raised;
-}
-
 // Main title in header
 .main-title {
   text-align: center;

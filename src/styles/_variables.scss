@@ -32,3 +32,24 @@ $shadow-lo: rgb(0 0 0 / 60%);
 $radius-lg: 18px;
 $radius-md: 14px;
 $radius-sm: 10px;
+
+// Typography
+$font-size-base: 22px;
+$font-size-reading: 22px;
+$font-size-excerpt: 20px;
+$font-size-day-label: 20px;
+$font-size-weeknum: 32px;
+$font-size-header: 27px;
+$letter-spacing-base: 0.02em;
+$letter-spacing-reading: 0.02em;
+
+// Transitions
+$transition-fast: 0.3s ease;
+$transition-medium: 0.3s ease;
+
+// Common shadows
+$shadow-table-row:
+  inset 0 6px 18px rgb(0 0 0 / 60%),
+  inset 0 -4px 12px rgb(255 255 255 / 3%),
+  0 2px 0 rgb(255 255 255 / 2%),
+  0 -2px 0 rgb(0 0 0 / 20%);

@@ -9,12 +9,12 @@
   transition: transform 0.3s ease-out;
   cursor: pointer;
   border-radius: 0 0 $radius-lg $radius-lg;
-  border: 1px solid rgb(255 255 255 / 8%);
+  border: 1px solid rgb(255 255 255 / 6%);
   border-top: none;
-  backdrop-filter: blur(16px);
-  background: linear-gradient(145deg, rgb(255 255 255 / 6%), rgb(255 255 255 / 2%));
+  backdrop-filter: blur(20px);
+  background: linear-gradient(145deg, rgb(255 255 255 / 4%), rgb(0 0 0 / 8%));
 
-  @include neo-raised(8px);
+  @include neo-raised(12px);
 
   &.header-hidden {
     transform: translateY(-100%);
@@ -27,7 +27,8 @@
     position: relative;
     cursor: default;
     border-radius: $radius-lg;
-    border: 1px solid rgb(255 255 255 / 8%);
+    border: 1px solid rgb(255 255 255 / 6%);
+    @include neo-raised(10px);
   }
 }
 
@@ -42,13 +43,13 @@
   align-items: center;
   gap: 4px;
   padding: 12px 16px;
-  border: 1px solid rgb(255 255 255 / 12%);
+  border: 1px solid rgb(255 255 255 / 8%);
   border-radius: $radius-md;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
   box-shadow:
-    8px 8px 20px rgb(0 0 0 / 50%),
-    -4px -4px 12px rgb(255 255 255 / 8%),
-    inset 0 1px 0 rgb(255 255 255 / 10%);
+    12px 12px 24px rgb(0 0 0 / 55%),
+    -6px -6px 16px rgb(255 255 255 / 6%),
+    inset 0 1px 0 rgb(255 255 255 / 8%);
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
@@ -67,11 +68,11 @@
   }
 
   &:hover {
-    background: linear-gradient(145deg, rgba($purple, 0.35), rgba($cyan, 0.25));
+    background: linear-gradient(145deg, rgba($purple, 0.4), rgba($cyan, 0.3));
     box-shadow:
-      10px 10px 24px rgb(0 0 0 / 60%),
-      -6px -6px 16px rgb(255 255 255 / 10%),
-      inset 0 1px 0 rgb(255 255 255 / 15%);
+      16px 16px 32px rgb(0 0 0 / 65%),
+      -8px -8px 20px rgb(255 255 255 / 8%),
+      inset 0 1px 0 rgb(255 255 255 / 12%);
   }
 
   &:active {

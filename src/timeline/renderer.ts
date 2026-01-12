@@ -75,7 +75,7 @@ function renderWeekRow(week: Week, isCurrentWeek: boolean): string {
 
   const excerptHtml = week.cfm.excerpt
     ? `<div class="cfm-excerpt">
-         <span class="cfm-excerpt-text">${week.cfm.excerpt}...</span>
+         <span class="cfm-excerpt-text">${week.cfm.excerpt}</span>
          <a href="${week.cfm.link}" target="_blank" class="cfm-excerpt-more">See more</a>
        </div>`
     : '';

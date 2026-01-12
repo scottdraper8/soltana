@@ -4,6 +4,9 @@
 .table-wrap {
   margin-top: 14px;
   padding: 14px;
+
+  @include glass-card;
+  @include neo-raised;
 }
 
 .table-head {
@@ -58,7 +61,7 @@ table.timeline {
       top: 0;
       z-index: 2;
       text-align: center;
-      font-size: 25px;
+      font-size: $font-size-header;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: $ink-1;
@@ -90,13 +93,10 @@ table.timeline {
     tr {
       position: relative;
       background: linear-gradient(145deg, rgb(0 0 0 / 12%), rgb(0 0 0 / 5%));
-      border-radius: 14px;
-      transition: background 0.3s ease;
-      box-shadow:
-        inset 0 4px 12px rgb(0 0 0 / 45%),
-        inset 0 -3px 8px rgb(255 255 255 / 4%),
-        0 2px 0 rgb(255 255 255 / 3%),
-        0 -2px 0 rgb(0 0 0 / 15%);
+      border-radius: $radius-md;
+      transition: background $transition-fast;
+
+      @include table-row-shadow;
 
       &:nth-child(2n) {
         background: linear-gradient(145deg, rgb(0 0 0 / 14%), rgb(0 0 0 / 6%));
@@ -104,13 +104,13 @@ table.timeline {
 
       td {
         &:first-child {
-          border-top-left-radius: 14px;
-          border-bottom-left-radius: 14px;
+          border-top-left-radius: $radius-md;
+          border-bottom-left-radius: $radius-md;
         }
 
         &:last-child {
-          border-top-right-radius: 14px;
-          border-bottom-right-radius: 14px;
+          border-top-right-radius: $radius-md;
+          border-bottom-right-radius: $radius-md;
         }
       }
 
@@ -119,14 +119,14 @@ table.timeline {
         inset: 0;
         display: block;
         opacity: 0;
-        border-radius: 14px;
+        border-radius: $radius-md;
         background: linear-gradient(
           135deg,
           rgba($pink, 0.06),
           rgba($purple, 0.06),
           rgba($cyan, 0.05)
         );
-        transition: opacity 0.25s ease;
+        transition: opacity $transition-fast;
         pointer-events: none;
         z-index: 0;
       }
@@ -135,7 +135,7 @@ table.timeline {
         position: absolute;
         inset: 0;
         display: block;
-        border-radius: 14px;
+        border-radius: $radius-md;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -152,14 +152,14 @@ table.timeline {
 
       &.current-week {
         background: linear-gradient(145deg, rgba($green, 0.18), rgba($cyan, 0.12), rgb(0 0 0 / 5%));
-        transition: background 0.3s ease;
+        transition: background $transition-fast;
         box-shadow:
           inset 6px 0 0 $green,
-          inset 0 4px 12px rgb(0 0 0 / 45%),
-          inset 0 -3px 8px rgb(255 255 255 / 4%),
-          0 2px 0 rgb(255 255 255 / 3%),
-          0 -2px 0 rgb(0 0 0 / 15%),
-          inset 0 0 20px rgba($green, 0.15);
+          inset 0 8px 20px rgb(0 0 0 / 55%),
+          inset 0 -5px 15px rgb(255 255 255 / 3%),
+          0 2px 0 rgb(255 255 255 / 2%),
+          0 -2px 0 rgb(0 0 0 / 20%),
+          inset 0 0 24px rgba($green, 0.12);
 
         .weeknum {
           color: $green;
@@ -178,25 +178,24 @@ table.timeline {
 }
 
 table.timeline tbody tr:first-child {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  @media (width > 768px) {
+    @include reset-first-row-radius;
 
-  td:first-child {
-    border-top-left-radius: 0;
-  }
+    td:first-child {
+      border-top-left-radius: 0;
+    }
 
-  td:last-child {
-    border-top-right-radius: 0;
-  }
+    td:last-child {
+      border-top-right-radius: 0;
+    }
 
-  .week-bg {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
+    .week-bg {
+      @include reset-first-row-radius;
+    }
 
-  .row-overlay {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    .row-overlay {
+      @include reset-first-row-radius;
+    }
   }
 }
 
@@ -214,7 +213,7 @@ table.timeline tbody tr:first-child {
     display: block;
     margin-bottom: 6px;
     line-height: 1.4;
-    font-size: 20px;
+    font-size: $font-size-base;
     letter-spacing: 0.04em;
 
     &:hover {
@@ -225,9 +224,8 @@ table.timeline tbody tr:first-child {
 
 .col-readings {
   width: 320px;
-  font-size: 19px;
-  line-height: 1.6;
-  letter-spacing: 0.02em;
+
+  @include reading-text;
 }
 
 // View toggle component
@@ -300,7 +298,7 @@ table.timeline tbody tr:first-child {
   align-items: center;
   gap: 10px;
   width: 100%;
-  padding: 10px 14px;
+  padding: 8px 14px;
   border-radius: $radius-sm;
   cursor: pointer;
   text-align: left;
@@ -327,8 +325,8 @@ table.timeline tbody tr:first-child {
 
     &:hover:not([disabled]) {
       box-shadow:
-        inset 5px 5px 12px rgb(0 0 0 / 45%),
-        inset -3px -3px 8px rgb(255 255 255 / 5%);
+        inset 8px 8px 16px rgb(0 0 0 / 60%),
+        inset -4px -4px 10px rgb(255 255 255 / 3%);
     }
   }
 
@@ -345,7 +343,7 @@ table.timeline tbody tr:first-child {
 .day-label {
   flex-shrink: 0;
   font-weight: 700;
-  font-size: 18px;
+  font-size: $font-size-day-label;
   color: $cyan;
   letter-spacing: 0.04em;
   min-width: 6ch;
@@ -355,8 +353,8 @@ table.timeline tbody tr:first-child {
   min-width: 0;
   flex: 1 1 auto;
   color: $ink-1;
-  font-size: 19px;
-  letter-spacing: 0.02em;
+
+  @include reading-text;
 
   &--empty {
     color: $ink-2;
@@ -366,7 +364,7 @@ table.timeline tbody tr:first-child {
 
 .weeknum {
   font-weight: 800;
-  font-size: 28px;
+  font-size: $font-size-weeknum;
   letter-spacing: 0.03em;
   color: $ink-0;
   padding-left: 8px;
@@ -374,23 +372,23 @@ table.timeline tbody tr:first-child {
 
 .dates {
   margin-top: 6px;
-  font-size: 19px;
   color: $ink-2;
-  letter-spacing: 0.02em;
   padding-left: 8px;
+
+  @include reading-text;
 }
 
 .cfm-reading {
-  font-size: 19px;
-  color: $ink-2;
   padding-left: 8px;
   border-left: 2px solid rgba($cyan, 0.3);
-  letter-spacing: 0.02em;
+  color: $ink-2;
+
+  @include reading-text;
 }
 
 .cfm-excerpt {
   margin-top: 8px;
-  font-size: 18px;
+  font-size: $font-size-excerpt;
   font-style: italic;
   color: rgba($ink-1, 0.85);
   line-height: 1.5;
@@ -405,21 +403,11 @@ table.timeline tbody tr:first-child {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 8;
-  line-clamp: 8;
+  -webkit-line-clamp: 10;
+  line-clamp: 10;
   -webkit-box-orient: vertical;
   line-break: auto;
   overflow-wrap: break-word;
-
-  @media (width <= 1024px) {
-    -webkit-line-clamp: 7;
-    line-clamp: 7;
-  }
-
-  @media (width <= 900px) {
-    -webkit-line-clamp: 6;
-    line-clamp: 6;
-  }
 }
 
 .cfm-excerpt-more {
@@ -516,17 +504,13 @@ table.timeline tbody tr:first-child {
   }
 
   .day-button {
+    // On mobile, remove enhanced hover shadows - keep base neo-button state
     &:hover:not([disabled]) {
-      box-shadow:
-        3px 3px 8px rgb(0 0 0 / 40%),
-        -2px -2px 6px rgb(255 255 255 / 4%),
-        inset 0 1px 0 rgb(255 255 255 / 6%);
+      box-shadow: inherit;
     }
 
     &--read:hover:not([disabled]) {
-      box-shadow:
-        inset 4px 4px 10px rgb(0 0 0 / 45%),
-        inset -2px -2px 6px rgb(255 255 255 / 4%);
+      box-shadow: inherit;
     }
   }
 
