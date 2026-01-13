@@ -126,6 +126,21 @@ table.timeline {
         filter: brightness(0.6) contrast(1.5);
         pointer-events: none;
         z-index: -1;
+
+        // Only transition on first load (not cached)
+        &.lazy-loading {
+          animation: fadeInBg 0.6s ease-in;
+        }
+      }
+
+      @keyframes fadeInBg {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 0.15;
+        }
       }
 
       &:hover:not(.current-week) .row-overlay {

@@ -8,6 +8,7 @@ import {
 } from './timeline/navigation';
 import { renderTimeline, loadViewMode } from './timeline/renderer';
 import { initViewToggle } from './timeline/viewToggle';
+import { initLazyImages } from './timeline/lazyImages';
 import { getCurrentWeekNumber } from './utils/dates';
 
 function init(): void {
@@ -20,6 +21,7 @@ function init(): void {
   initialScrollToCurrentWeek();
   initStickyHeader();
   initScrollNavButton();
+  initLazyImages();
 }
 
 document.addEventListener('DOMContentLoaded', init);
