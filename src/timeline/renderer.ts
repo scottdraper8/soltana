@@ -2,7 +2,7 @@ import type { Week, ViewMode } from '../types/timeline';
 import { formatWeekNumber } from '../utils/dates';
 import { createDayId, loadReadDays, toggleDayRead } from '../utils/storage';
 import { formatChapters, distributeAcrossDays } from '../utils/chapterFormatter';
-import { updateMobileSortFab, getTooltipText } from './viewToggle';
+import { updateSortFabIcon, getTooltipText } from './viewToggle';
 import chronologicalOrderData from '../data/chronologicalOrder.json';
 
 let readDays = new Set<string>();
@@ -134,7 +134,7 @@ function updateSortToggleState(): void {
     tooltip.innerHTML = getTooltipText();
   }
 
-  updateMobileSortFab();
+  updateSortFabIcon();
 }
 
 export function renderTimeline(weeks: Week[], currentWeek: number): void {

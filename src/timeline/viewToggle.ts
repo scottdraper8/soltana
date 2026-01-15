@@ -46,9 +46,13 @@ function handleSortToggleClick(event: Event): void {
   setViewMode(newMode);
 }
 
-function showFab(): void {
+function isMobile(): boolean {
+  return window.innerWidth <= 1768;
+}
+
+function showFabTemporarily(): void {
   const fab = document.getElementById('sort-fab');
-  if (!fab) return;
+  if (!fab || !isMobile()) return;
 
   fab.classList.add('visible');
 
@@ -71,7 +75,25 @@ function showTooltip(): void {
   }, 2000);
 }
 
-export function updateMobileSortFab(): void {
+function updateFabVisibility(): void {
+  const fab = document.getElementById('sort-fab');
+  if (!fab) return;
+
+  const thead = document.querySelector('.timeline thead');
+  if (!thead) return;
+
+  if (isMobile()) {
+    if (!fab.classList.contains('visible')) {
+      showFabTemporarily();
+    }
+  } else {
+    const rect = thead.getBoundingClientRect();
+    const isHeaderVisible = rect.bottom > 0;
+    fab.classList.toggle('visible', !isHeaderVisible);
+  }
+}
+
+export function updateSortFabIcon(): void {
   const fab = document.getElementById('sort-fab');
   if (!fab) return;
 
@@ -89,26 +111,39 @@ export function updateMobileSortFab(): void {
   }
 }
 
-function initMobileSortFab(): void {
+function initSortFab(): void {
   const fab = document.getElementById('sort-fab');
   if (!fab) return;
-
-  updateMobileSortFab();
-
-  showFab();
 
   fab.addEventListener('click', () => {
     const newMode = getViewMode() === 'lesson' ? 'chronological' : 'lesson';
     setViewMode(newMode);
     showTooltip();
-    showFab();
+    if (isMobile()) {
+      showFabTemporarily();
+    }
   });
 
-  // Touch zone to reveal hidden FAB
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (!isMobile()) {
+        updateFabVisibility();
+      }
+    },
+    { passive: true }
+  );
+
   const touchZone = document.createElement('div');
   touchZone.className = 'sort-fab-touch-zone';
   document.body.appendChild(touchZone);
-  touchZone.addEventListener('click', showFab);
+  touchZone.addEventListener('click', () => {
+    if (isMobile()) {
+      showFabTemporarily();
+    }
+  });
+
+  updateFabVisibility();
 }
 
 export function initViewToggle(containerId = 'sort-toggle-container'): void {
@@ -124,5 +159,6 @@ export function initViewToggle(containerId = 'sort-toggle-container'): void {
     button.addEventListener('click', handleSortToggleClick);
   }
 
-  initMobileSortFab();
+  updateSortFabIcon();
+  initSortFab();
 }

@@ -34,38 +34,19 @@
 
 // Scroll navigation button
 .scroll-nav-btn {
-  position: fixed;
+  @include fab-base;
+
   bottom: 24px;
   right: 24px;
-  z-index: 200;
-  display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 4px;
   padding: 12px 16px;
-  border: 1px solid rgb(255 255 255 / 8%);
-  border-radius: $radius-md;
-  backdrop-filter: blur(16px);
   box-shadow:
     12px 12px 24px rgb(0 0 0 / 55%),
     -6px -6px 16px rgb(255 255 255 / 6%),
     inset 0 1px 0 rgb(255 255 255 / 8%);
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease,
-    transform 0.3s ease;
 
   @include gradient-scroll-nav;
-
-  &.visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
 
   &:hover {
     background: linear-gradient(145deg, rgba($purple, 0.4), rgba($cyan, 0.3));
@@ -79,7 +60,7 @@
     transform: translateY(2px);
   }
 
-  @media (width <= 768px) {
+  @media (width <= 1768px) {
     width: 56px;
     height: 56px;
     padding: 0;
@@ -107,43 +88,44 @@
   letter-spacing: 0.08em;
 }
 
-// Mobile floating sort button
+// Sort order FAB (mobile + desktop when header hidden)
 .sort-fab {
-  display: none;
-  position: fixed;
+  @include fab-base;
+
   bottom: 24px;
   left: 24px;
-  z-index: 200;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  padding: 0;
-  border: 1px solid rgb(255 255 255 / 8%);
-  border-radius: 50%;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 16px;
   background: linear-gradient(145deg, $bg-2, $bg-3);
   box-shadow:
     8px 8px 20px rgb(0 0 0 / 55%),
     -4px -4px 12px rgb(255 255 255 / 5%),
     inset 0 1px 0 rgb(255 255 255 / 8%);
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: all $transition-fast;
 
-  @media (width <= 768px) {
-    display: flex;
-  }
-
-  &.visible {
-    opacity: 1;
-    visibility: visible;
+  &:hover {
+    background: linear-gradient(145deg, rgba($cyan, 0.25), rgba($purple, 0.2));
+    box-shadow:
+      12px 12px 28px rgb(0 0 0 / 65%),
+      -6px -6px 16px rgb(255 255 255 / 7%),
+      inset 0 1px 0 rgb(255 255 255 / 12%);
   }
 
   &:active {
     box-shadow:
       inset 4px 4px 10px rgb(0 0 0 / 50%),
       inset -2px -2px 6px rgb(255 255 255 / 3%);
+  }
+
+  @media (width <= 1768px) {
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    border-radius: 50%;
+
+    .sort-label {
+      display: none;
+    }
   }
 }
 
@@ -161,6 +143,14 @@
     stroke: $purple;
     transform: rotate(180deg);
   }
+}
+
+.sort-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: $ink-1;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .sort-fab-tooltip {
@@ -215,7 +205,7 @@
   height: 100px;
   z-index: 199;
 
-  @media (width <= 768px) {
+  @media (width <= 1768px) {
     display: block;
   }
 }

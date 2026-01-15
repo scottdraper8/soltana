@@ -84,3 +84,29 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+// Fixed action button base styles
+@mixin fab-base {
+  position: fixed;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: $radius-md;
+  backdrop-filter: blur(16px);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
