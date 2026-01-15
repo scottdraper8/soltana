@@ -34,11 +34,7 @@ function getDailyReadings(week: Week, viewMode: ViewMode): string[] {
 }
 
 function renderDayButton(weekNumber: number, dayIndex: number, reading: string): string {
-  const dayId = createDayId(
-    weekNumber,
-    dayIndex,
-    currentViewMode === 'lesson' ? 'lesson' : 'chrono'
-  );
+  const dayId = createDayId(weekNumber, dayIndex);
   const dayOfYear = (weekNumber - 1) * 7 + dayIndex + 1;
   const isEmpty = reading === '';
   const isRead = readDays.has(dayId);
