@@ -8,7 +8,6 @@ import chronologicalOrderData from '../data/chronologicalOrder.json';
 let readDays = new Set<string>();
 let currentViewMode: ViewMode = 'lesson';
 let cachedWeeks: Week[] = [];
-let cachedCurrentWeek = 0;
 
 const chronoIndexMap = new Map<string, number>();
 chronologicalOrderData.itemListElement.forEach((item, index) => {
@@ -140,7 +139,6 @@ function updateSortToggleState(): void {
 
 export function renderTimeline(weeks: Week[], currentWeek: number): void {
   cachedWeeks = weeks;
-  cachedCurrentWeek = currentWeek;
 
   const tbody = document.querySelector('.timeline tbody');
   if (!tbody) {
@@ -163,15 +161,31 @@ export function getViewMode(): ViewMode {
   return currentViewMode;
 }
 
+function reorderReadings(): void {
+  if (cachedWeeks.length === 0) return;
+
+  cachedWeeks.forEach((week) => {
+    const row = getWeekRow(week.week);
+    if (!row) return;
+
+    const readingsCell = row.querySelector('.col-readings');
+    if (!readingsCell) return;
+
+    const daily = getDailyReadings(week, currentViewMode);
+    readingsCell.innerHTML = renderDailyReadings(daily, week.week);
+  });
+
+  attachDayButtonHandlers();
+}
+
 export function setViewMode(mode: ViewMode): void {
   if (mode === currentViewMode) return;
 
   currentViewMode = mode;
   localStorage.setItem('timeline-view-mode', mode);
 
-  if (cachedWeeks.length > 0) {
-    renderTimeline(cachedWeeks, cachedCurrentWeek);
-  }
+  reorderReadings();
+  updateSortToggleState();
 }
 
 export function loadViewMode(): ViewMode {
